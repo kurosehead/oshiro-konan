@@ -604,6 +604,29 @@ var featured_news_swiper = new Swiper(".featured-news-swiper", {
 });
 
 /*==================================================
+MV swiper
+==================================================*/
+jQuery(function ($) {
+  const mvSwiperEl = document.querySelector(".mv_swiper");
+
+  if (!mvSwiperEl) return;
+
+  new Swiper(mvSwiperEl, {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    speed: 1000,
+    allowTouchMove: false,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+  });
+});
+
+/*==================================================
 flow_swiper
 ==================================================*/
 // document.addEventListener("DOMContentLoaded", function () {
@@ -1269,28 +1292,6 @@ jQuery(function ($) {
   setTimeout(syncBlogHeight, 5000);
 
   syncBlogHeight();
-});
-
-/*==================================================
-MV 動画読み込み後コピー表示
-==================================================*/
-$(function () {
-  var $mv = $(".top--mv");
-  var $video = $(".mv__video-wrap video");
-
-  if (!$mv.length || !$video.length) return;
-
-  $mv.addClass("is-mv-loading");
-
-  function showCopy() {
-    $mv.removeClass("is-mv-loading");
-    $mv.addClass("is-video-loaded");
-  }
-
-  $video.on("loadeddata", showCopy);
-
-  // 保険：動画読み込みが遅い・発火しない場合でも表示
-  setTimeout(showCopy, 2000);
 });
 
 /*==================================================

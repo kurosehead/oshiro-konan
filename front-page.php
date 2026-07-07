@@ -31,40 +31,49 @@
         </div>
       </div>
     </div> -->
-    <div class="mv__video-wrap">
-      <video class="video" src="<?php echo get_template_directory_uri(); ?>/video/oshiroskinclinic_720.mp4" autoplay
-        muted playsinline loop preload="auto"></video>
-      <span class="multiply"></span>
-    </div>
-    <div class="mv__copy">
-      <p class="ttl">貴方の想像を超える大規模なクリニック</p>
-      <p class="ja">安心と最新を、あなたの肌に</p>
-      <p class="en">Confidence and Innovation, For Your Skin</p>
-      <p class="ja">専門医の手で輝く毎日へ</p>
-      <p class="en">Expert Care for a Radiant Days</p>
-
-      <div class="mv__achievements">
-        <div class="achievements-item">
-          <p class="row">総患者数</p>
-          <p class="row row-num">
-            <span class="num">70</span><span class="small">万人</span>
-          </p>
-          <p class="row">以上</p>
-        </div>
-        <div class="achievements-item">
-          <p class="row">累計手術件数</p>
-          <p class="row row-num">
-            <span class="num">6,000</span><span class="small">件</span>
-          </p>
-          <p class="row">以上</p>
-        </div>
-        <div class="achievements-item">
-          <p class="row">皮膚科専門医</p>
-          <p class="row row-num">
-            <span class="num">10</span><span class="small">名以上</span>
-          </p>
-          <p class="row">在籍</p>
-        </div>
+    <div class="mv">
+      <div class="mv_swiper">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <picture>
+              <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/img/top/mv01_sp.webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/top/mv01.webp" alt="" loading="eager" fetchpriority="high">
+            </picture>
+          </li>
+          <li class="swiper-slide">
+            <picture>
+              <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/img/top/mv02_sp.webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/top/mv02.webp" alt="">
+            </picture>
+          </li>
+          <li class="swiper-slide">
+            <picture>
+              <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/img/top/mv03_sp.webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/top/mv03.webp" alt="">
+            </picture>
+          </li>
+          <li class="swiper-slide">
+            <picture>
+              <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/img/top/mv04_sp.webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/top/mv04.webp" alt="">
+            </picture>
+          </li>
+          <li class="swiper-slide">
+            <picture>
+              <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/img/top/mv05_sp.webp">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/top/mv05.webp" alt="">
+            </picture>
+          </li>
+        </ul>
+      </div>
+      <div class="mv__overlay" aria-hidden="true"></div>
+      <div class="mv_copy">
+        <p class="txt">大城皮フ科クリニック江南院</p>
+        <p class="read">
+          江南市の皆さまにとって<br>
+          通いやすく皮膚科専門医が<br>
+          必ず診察します
+        </p>
       </div>
     </div>
   </div>
@@ -455,10 +464,10 @@
             世界最大の美容機器メーカー、サイノシュア社・ルートロニック社のKOL（Key Opinion Leader）を務める院長が厳選した同社の機器を、1医院で最も多く導入。（17台）<br>
             しみ・しわ・たるみ・ニキビ跡・赤ら顔・毛穴など、あらゆる肌トラブルに対して、機器ごとの特性を熟知した医師が、<span
               class="bold">患者様のお悩みやご希望に合わせてオーダーメイド</span>で治療をご提案いたします。<br><br>
-              ※① 2026年5月末現在　サイノシュアー・ルートロニック社確認済み。
-              ※②スペクトラ4台・ヒーライトⅡ4台・モザイク3D2台・エコツーエボリューション1台・ラセムド1台・インフィニハイブリッド1台・XERF（ザーフ）1台・クラリティツイン2台　合計16台。
+            ※① 2026年5月末現在　サイノシュアー・ルートロニック社確認済み。
+            ※②スペクトラ4台・ヒーライトⅡ4台・モザイク3D2台・エコツーエボリューション1台・ラセムド1台・インフィニハイブリッド1台・XERF（ザーフ）1台・クラリティツイン2台　合計16台。
           </p>
-          
+
         </div>
         <div class="machine-slider">
           <ul class="machine-slider__list">
@@ -948,19 +957,19 @@
         <div class="blog__btn btn-more--underline">
           <a href="<?php echo home_url(); ?>/genre/blog/">もっと見る</a>
         </div>
-      </section>
-    </div>
-  <?php endif;
+    </section>
+  </div>
+<?php endif;
       wp_reset_postdata(); ?>
 
-  <section class="top--banner-recruit">
-    <div class="container">
-      <a href="/recruit/">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/banner-recruit.webp" alt="求人バナーPC" class="pc">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/banner-recruit_sp.webp" alt="求人バナーSP" class="sp">
-      </a>
-    </div>
-  </section>
+<section class="top--banner-recruit">
+  <div class="container">
+    <a href="/recruit/">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/banner-recruit.webp" alt="求人バナーPC" class="pc">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/banner-recruit_sp.webp" alt="求人バナーSP" class="sp">
+    </a>
+  </div>
+</section>
 
 </main>
 
