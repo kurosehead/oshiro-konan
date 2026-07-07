@@ -8,29 +8,7 @@
         <img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.svg" alt="大城皮フ科クリニック">
       </a>
     </p>
-    <!-- ご予約・お問い合わせ/ハンバーガー -->
-    <!-- <div class="contact-ham__btn">
-      <div class="common__btn-contact reservation-modal__open">
-        <a href="#">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/reservation_icon.webp" alt="">
-          <p class="contact-ham__btn_txt">大口本院予約</p>
-        </a>
-      </div>
-      <div class="common__btn-contact beauty__btn-contact ">
-        <a href="https://konan.oshiro-skin-clinic.com/" target="_blank">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/reservation_icon.webp" alt="">
-          <p class="contact-ham__btn_txt">江南院予約</p>
-        </a>
-      </div>
 
-      <div class="common__btn-hamburger openbtn">
-        <div class="hamburger_lines">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </div>
-      </div>
-    </div> -->
     <div class="mv">
       <div class="mv_swiper">
         <ul class="swiper-wrapper">
@@ -78,78 +56,6 @@
     </div>
   </div>
 
-  <!-- 注目のお知らせ -->
-  <section class="top--featured-news">
-    <div class="featured-news__inner">
-      <div class="featured-news__inner-ttl">
-        <p class="en">FEATURED<br>NEWS</p>
-        <h2 class="ja">注目のお知らせ</h2>
-        <div class="swiper-button__wrap">
-          <div class="featured-news-swiper-button-prev swiper-button-prev"></div>
-          <div class="featured-news-swiper-button-next swiper-button-next"></div>
-        </div>
-      </div>
-    </div>
-    <div class="swiper featured-news-swiper">
-      <ul class="swiper-wrapper">
-        <li class="swiper-slide">
-          <a href="<?php echo home_url(); ?>/blogcat/pickup/">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/pickup/20260514_img_item_banner_oshiro_blog.webp" alt="">
-          </a>
-        </li>
-        <li class="swiper-slide">
-          <a href="<?php echo home_url(); ?>/recruit/nurse/">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/pickup/20260605_img_banner_oshiro_recruit_nurse.webp" alt="">
-          </a>
-        </li>
-        <li class="swiper-slide">
-          <a href="<?php echo home_url(); ?>/general/epidermal-cyst/">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/pickup/20260514_img_item_banner_oshiro_hokuro.webp" alt="">
-          </a>
-        </li>
-        <li class="swiper-slide">
-          <a href="https://konan.oshiro-skin-clinic.com/" target="_blank">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/pickup/20260514_img_item_banner_oshiro_konan.webp" alt="">
-          </a>
-        </li>
-        <li class="swiper-slide">
-          <a href="https://oshiro-skin-clinic.shop/?utm_source=official_site&utm_medium=referral&utm_campaign=cosme_product_page&utm_content=&top" target="_blank">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/pickup/20260514_img_item_banner_oshiro_onlineshop.webp" alt="">
-          </a>
-        </li>
-        <li class="swiper-slide">
-          <a href="<?php echo home_url(); ?>/worries/rosacea/">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/pickup/img_banner_oshiro_akarasyusa.webp" alt="">
-          </a>
-        </li>
-        <li class="swiper-slide">
-          <a href="<?php echo home_url(); ?>/general/atipic-dermatitis/">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/pickup/img_banner_oshiro_atopy.webp" alt="">
-          </a>
-        </li>
-        <li class="swiper-slide">
-          <a href="<?php echo home_url(); ?>/worries/removal/">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/pickup/img_banner_oshiro_datsumou.webp" alt="">
-          </a>
-        </li>
-        <li class="swiper-slide">
-          <a href="<?php echo home_url(); ?>/beauty/hyaluron/">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/pickup/img_banner_oshiro_hyaluron.webp" alt="">
-          </a>
-        </li>
-        <li class="swiper-slide">
-          <a href="<?php echo home_url(); ?>/general/acne-php/">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/pickup/img_banner_oshiro_nikibi.webp" alt="">
-          </a>
-        </li>
-        <li class="swiper-slide">
-          <a href="<?php echo home_url(); ?>/worries/stain/">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/pickup/img_banner_oshiro_shimi.webp" alt="">
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
 
   <div class="news-information__wrap container">
     <!-- NEWS -->

@@ -2,7 +2,7 @@
   <div class="footer--above">
     <div class="footer__logo">
       <a href="<?php echo home_url(); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/logo-color.svg" alt="大城皮フ科クリニック">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/logo-color--konan.svg" alt="大城皮フ科クリニック 江南院">
       </a>
     </div>
 
@@ -11,13 +11,13 @@
       <div class="above-left">
 
         <div class="footer__address-area">
-          <p class="footer__address">〒480-0126<br>
-            愛知県丹羽郡大口町伝右1丁目19番地</p>
+          <p class="footer__address">〒483-8086<br>
+            愛知県江南市高屋町大松原119-1</p>
           <p class="footer__tel">
-            <a href="tel:0587817100">TEL：0587-81-7100</a>
+            <a href="tel:0587530111">TEL：0587-53-0111</a>
           </p>
           <p class="footer__subject">一般皮膚科／アレルギー科、小児皮膚科、<br class="sp">皮膚外科／形成外科、美容皮膚科</p>
-          <p class="footer__parking-spots">駐車場200台完備</p>
+          <p class="footer__parking-spots">駐車場50台完備</p>
         </div>
 
         <div class="footer__opening-time information-table--area">
@@ -40,41 +40,39 @@
                 <td class="on">〇</td>
                 <td class="off">ー</td>
                 <td class="on">〇</td>
-                <td class="on">〇</td>
+                <td class="off">ー</td>
                 <td class="off">ー</td>
               </tr>
               <tr>
-                <th>15:30~<br class="sp">18:30</th>
+                <th>14:00~<br class="sp">17:00</th>
                 <td class="on">〇</td>
                 <td class="on">〇</td>
                 <td class="on">〇</td>
                 <td class="off">ー</td>
                 <td class="on">〇</td>
-                <td class="on red">〇</td>
+                <td class="off">ー</td>
                 <td class="off">ー</td>
               </tr>
             </tbody>
           </table>
-          <p class="notes red">土曜日の午後は、14:00〜17:00までとなります。</p>
-          <p class="notes">【休診日】木曜、日曜、祝日</p>
-          <p class="notes">受付時間が過ぎても診察が続いている場合、ご予約をされている患者さまに限り午前は12：30まで、午後は19：00まで（土曜は17：30まで）</p>
-          <p class="notes">美容カウンセリング受付時間は、通常の診療時間より各枠30分早く終了します。</p>
+          <p class="notes">【休診日】木・土・日</p>
+          <p class="notes">受付時間が過ぎても診察が続いている場合、ご予約されている患者さまに限り午前は12:00まで、午後は17:30まで</p>
         </div>
         <div class="sns pc">
           <ul class="sns__list">
             <li class="sns__item">
               <a href="https://www.instagram.com/oshiro_skin_clinic/" target="_blank">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/sns-instagram.svg" alt="Instagram">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/sns-instagram.webp" alt="Instagram">
               </a>
             </li>
             <li class="sns__item">
               <a href="https://www.youtube.com/channel/UCcqbuu9Gf0VfEPmhj_dtBpA" target="_blank">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/sns-youtube.svg" alt="YouTube">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/sns-youtube.webp" alt="YouTube">
               </a>
             </li>
             <li class="sns__item">
               <a href="https://line.me/R/ti/p/%40krk6891a" target="_blank">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/sns-line.svg" alt="LINE">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/sns-line.webp" alt="LINE">
               </a>
             </li>
           </ul>
@@ -95,30 +93,37 @@
             <div class="tab__panel access-tab__panel show">
               <div class="panel-frame">
                 <div class="access-tab__panel-inner">
-                  <ul class="list-square">
-                    <li>国道41号『新宮2丁目北』交差点（さくら病院様のある交差点）を西に進んで頂くと、3分ほどで左側に見えてまいります。</li>
-                    <li>大口町健康文化センター、MEGAドン・キホーテUNY大口店より徒歩1分</li>
-                  </ul>
+                  <p class="ttl">江南駅から</p>
+                  <p class="txt">
+                    名鉄江南駅から江南駅西通りや江南中央道を経由して宮後西交差点を左折、さらに野白町葭場交差点を右折してすいとぴあ名草線（県道17号）に入り、そのまましばらく直進して村久野金森交差点を右折、左前方に江南院が見えてきます。<br>
+                    （所要時間約10分）
+                  </p>
+                </div>
+                <div class="access-tab__panel-inner">
+                  <p class="ttl">江南市役所方面から</p>
+                  <p class="txt">
+                    江南市役所から市役所東西線を西へ進み、「赤童子西」交差点を右折しすいとぴあ名草線（県道63号）に入る。そのまま高屋町方面へ直進し「村久野金森」交差点を右折すると、左前方に江南院が見えてきます。<br>
+                    （所要時間約11分）
+                  </p>
                 </div>
                 <div class="access-tab__panel-inner">
                   <p class="ttl">名古屋高速をご利用の方</p>
-                  <ul class="list-square">
-                    <li>小牧北IC、東名高速道路　小牧ICから8分（3km）</li>
-                    <li>一宮東ICから24分</li>
-                    <li>名古屋市役所より名古屋高速経由で25分</li>
-                  </ul>
+                  <p class="txt">
+                    名古屋駅から中央郵便局や菊井町を経由して明道町ICから名古屋高速（6号清須線・16号一宮線）に入り、一宮東出口で国道22号（名岐バイパス）へ降りた後は、南小渕交差点から県道154号、加茂新出交差点から国道155号へと進み、五明町交差点からすいとぴあ名草線を江南市高屋町方面へ直進して村久野金森交差点を右折すると、左前方に大城皮フ科クリニック江南院が見えてきます。<br>
+                    （所要時間約45分）
+                  </p>
                 </div>
                 <div class="access-tab__panel-inner">
                   <p class="ttl">隣接地域からのアクセスの方</p>
                   <ul class="list-square column-2">
-                    <li>イオンモール扶桑より10分</li>
-                    <li>各務原市役所より25分</li>
-                    <li>小牧市役所より13分</li>
-                    <li>春日井市役所より27分</li>
-                    <li>テラスウォーク一宮より22分</li>
-                    <li>犬山市役所より14分</li>
-                    <li>岩倉市役所より18分</li>
-                    <li>布袋駅より9分</li>
+                    <li>イオンモール扶桑から約10分</li>
+                    <li>各務原市役所から約21分</li>
+                    <li>テラスウォーク一宮から約22分</li>
+                    <li>ツインアーチ138から約18分</li>
+                    <li>浅井山公園から約15分</li>
+                    <li>いちい信金スポーツセンターから約18分</li>
+                    <li>犬山市役所から約21分</li>
+                    <li>岩倉市役所から約24分</li>
                   </ul>
                 </div>
               </div>
@@ -128,48 +133,41 @@
             <div class="tab__panel access-tab__panel">
               <div class="panel-frame">
                 <div class="access-tab__panel-inner">
-                  <p class="ttl">タクシー</p>
+                  <p class="ttl">電車をご利用の方（バスを使わない場合）</p>
                   <ul class="list-square">
-                    <li>名鉄犬山線 江南駅・柏森駅より約10分</li>
+                    <li>名鉄「江南駅」よりタクシーで約10分。</li>
+                    <li>名鉄「柏森駅」よりタクシーで約10分。</li>
                   </ul>
+                  <p class="txt">行き先に「江南厚生病院の隣にある大城皮フ科クリニック江南院」とお伝えください。</p>
                 </div>
                 <div class="access-tab__panel-inner">
-                  <p class="ttl">バス</p>
+                  <p class="ttl">バスをご利用の方</p>
                   <ul class="list-square">
-                    <li>大口町コミュニティバス（詳しくはこちら）　柏森駅より8分</li>
-                    <li>「健康文化センター」　バス停より徒歩1分</li>
-                  </ul>
-                </div>
-                <div class="access-tab__panel-inner">
-                  <p class="ttl">江南駅まで</p>
-                  <ul class="list-square">
-                    <li>名鉄名古屋駅より名鉄犬山線 特急で17分</li>
+                    <li>名鉄バス</li>
+                    <li>名鉄「江南駅」より → バス停「高屋大松原」下車（約10分）→ 徒歩３分</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
           <p class="panel-notes txt">
-            当院は、クリニックがあります丹羽郡大口町・扶桑町をはじめ、江南市、小牧市、犬山市、岩倉市、北名古屋市、豊山町、各務原市からもアクセスしやすい立地にございます。<br>
-            また、名古屋市や岐阜市、可児市、多治見市といった愛知・岐阜両県全域から多くの方に足を運んでいただいているほか、東京や大阪などの遠方から
-            定期的に通ってくださる患者さまもいらっしゃいます。<br>
-            近隣にお住まいの方から、遠方からお越しの方まで、すべての患者さまに寄り添った丁寧な診療をお約束いたします。
+            当院は江南市、扶桑町、大口町、各務原市、一宮市、犬山市、岩倉市を中心に、多くの方にご来院いただいている皮膚科医院です。 また、お車でのアクセスも良いため、名古屋市、北名古屋市、小牧市、春日井市、岐阜市、可児市、美濃加茂市、岐南町などからも広くお越しいただいております。
           </p>
           <div class="sns sp">
             <ul class="sns__list">
               <li class="sns__item">
                 <a href="https://www.instagram.com/oshiro_skin_clinic/" target="_blank">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/sns-instagram.svg" alt="Instagram">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/sns-instagram.webp" alt="Instagram">
                 </a>
               </li>
               <li class="sns__item">
                 <a href="https://www.youtube.com/channel/UCcqbuu9Gf0VfEPmhj_dtBpA" target="_blank">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/sns-youtube.svg" alt="YouTube">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/sns-youtube.webp" alt="YouTube">
                 </a>
               </li>
               <li class="sns__item">
                 <a href="https://line.me/R/ti/p/%40krk6891a" target="_blank">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/sns-line.svg" alt="LINE">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/sns-line.webp" alt="LINE">
                 </a>
               </li>
             </ul>
@@ -248,8 +246,7 @@
 <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
 <script>
-
-  window.addEventListener('DOMContentLoaded', function () {
+  window.addEventListener('DOMContentLoaded', function() {
     new ScrollHint('.js-scrollable', {
       scrollHintIconAppendClass: 'scroll-hint-icon-white',
       suggestiveShadow: true,

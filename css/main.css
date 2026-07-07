@@ -3766,15 +3766,14 @@ footer {
         display: flex;
         justify-content: center;
         gap: 1.04vw;
-        margin-top: clamp(50px, 42.718px + 1.942vw, 80px);
+        margin-top: min(40px, 10.67vw);
 
         @media (max-width: 767px) {
           gap: 20px;
         }
 
         .sns__item {
-          width: clamp(30px, 26.359px + 0.971vw, 45px);
-          height: clamp(30px, 26.359px + 0.971vw, 45px);
+          width: min(102px, 27.2vw);
 
           a {
             display: block;
@@ -3793,8 +3792,12 @@ footer {
   }
 
   .footer__logo {
-    width: clamp(240px, 169.612px + 18.77vw, 530px);
+    width: clamp(178px, 169.612px + 18.77vw, 492px);
     margin: 0 auto clamp(20px, 0.583px + 5.178vw, 100px);
+
+    img {
+      width: 100%;
+    }
   }
 
   .information-table--area {
@@ -6989,7 +6992,7 @@ footer {
 
   /* 当院の理念 */
   .sec--philosophy {
-    background: url("../img/about/philosophy-bg.jpg") top center / cover no-repeat;
+    background: url("../img/about/philosophy-bg.webp") top center / cover no-repeat;
     padding-top: clamp(40px, 30.291px + 2.589vw, 80px);
     padding-bottom: clamp(70px, 50.583px + 5.178vw, 150px);
 

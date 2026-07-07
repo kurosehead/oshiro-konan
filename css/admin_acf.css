@@ -1,0 +1,455 @@
+@charset "utf-8";
+
+/*--------------------
+root
+--------------------*/
+:root {
+  --font-min: "Shippori Mincho", serif;
+  --color-ttl: #432815;
+  --color-general: #d6822f;
+  --color-beauty: #c62c2b;
+}
+
+/*----------------------------
+管理画面カスタマイズ：料金表
+----------------------------*/
+.page-template-page-price {}
+
+/*----------------------------
+管理画面カスタマイズ：
+保険診療
+----------------------------*/
+.post-type-general {
+  img.alignleft {
+    float: left;
+    margin: 0 clamp(20px, 17.573px + 0.647vw, 30px) 10px 0;
+
+    @media (max-width: 767px) {
+      float: none;
+      margin: 0 0 clamp(20px, 17.573px + 0.647vw, 30px);
+      display: block;
+    }
+  }
+
+  p:has(img.alignleft) {
+    &::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
+
+  p {
+    font-size: clamp(14px, 13.029px + 0.259vw, 18px);
+    line-height: 1.7;
+    margin: 10px 0;
+  }
+
+  h3 {
+    font-family: var(--font-min);
+    font-weight: 500;
+    font-size: clamp(22px, 20.544px + 0.388vw, 28px);
+    color: #fff;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #D6822F 0%, #E1A972 100%);
+    padding: 10px 15px;
+    margin: clamp(40px, 35.146px + 1.294vw, 60px) 0 clamp(20px, 17.573px + 0.647vw, 30px);
+  }
+
+  h4 {
+    position: relative;
+    color: var(--color-general);
+    border-bottom: 1px var(--color-general) dashed;
+    padding-bottom: 10px;
+    padding-left: 43px;
+    margin-bottom: 30px;
+    font-family: var(--font-min);
+    font-weight: 500;
+    font-size: clamp(22px, 21.515px + 0.129vw, 24px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 40%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 34px;
+      aspect-ratio: 1 / 1;
+      background: url("../img/symbol-general.svg") center center / contain no-repeat;
+      display: inline-block;
+    }
+  }
+
+  h5 {
+    background-color: #FFF3E7;
+    font-family: var(--font-min);
+    font-weight: 500;
+    font-size: clamp(22px, 21.515px + 0.129vw, 24px);
+    color: var(--color-general);
+    border-left: 7px var(--color-general) solid;
+    padding: 5px 15px;
+    margin: 30px 0 20px;
+  }
+
+  h6 {
+    position: relative;
+    font-weight: normal;
+    font-size: clamp(14px, 13.029px + 0.259vw, 18px);
+    padding-left: 20px;
+    margin: 20px 0 clamp(5px, 3.786px + 0.324vw, 10px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      width: clamp(6px, 5.515px + 0.129vw, 8px);
+      aspect-ratio: 1 / 1;
+      display: inline-block;
+      background-color: var(--color-general);
+    }
+  }
+
+  li {
+    font-size: clamp(14px, 13.029px + 0.259vw, 18px);
+    list-style: none;
+  }
+
+  li+li {
+    margin-top: 5px;
+  }
+
+  ul {
+    padding-left: 0;
+
+    li {
+      position: relative;
+      padding-left: clamp(14px, 13.029px + 0.259vw, 18px);
+
+      &::before {
+        content: "・";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: clamp(14px, 13.029px + 0.259vw, 18px);
+        color: var(--color-general);
+      }
+    }
+  }
+
+  ol {
+    counter-reset: number;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      counter-increment: number;
+      position: relative;
+      padding-left: 1.75em;
+
+      &::before {
+        content: counter(number);
+        position: absolute;
+        left: 0;
+        top: 0.1em;
+        width: 1.6em;
+        height: 1.6em;
+        border-radius: 50%;
+        background: var(--color-general);
+        color: #fff;
+        font-size: 0.85em;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: var(--color-general);
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  a.btn-link {
+    position: relative;
+    border-radius: 4px;
+    background: #FFF;
+    text-decoration: none;
+    color: initial;
+    display: block;
+    max-width: 460px;
+    width: 100%;
+    box-shadow: 0 0 10px 0 #F6ECEC;
+    padding: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      background: url("data:image/svg+xml,%3Csvg width='25' height='5' viewBox='0 0 25 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 4.5H23.5L19.5 0.5' stroke='%23C62C2B' stroke-linecap='round'/%3E%3C/svg%3E%0A") center center / contain no-repeat;
+      width: 23px;
+      aspect-ratio: 23 / 4;
+      display: inline-block;
+    }
+  }
+
+  a.btn-link:hover {
+    opacity: 0.6;
+  }
+
+  table {
+    margin: 20px 0;
+    border: 1px var(--color-general) solid;
+
+    th {
+      border: 1px #F3DDC3 solid;
+      background-color: #FFF3E7;
+      font-size: clamp(14px, 13.029px + 0.259vw, 18px);
+      padding: clamp(10px, 7.573px + 0.647vw, 20px);
+      color: var(--color-general);
+      font-weight: normal;
+    }
+
+    td {
+      border: 1px #F3DDC3 solid;
+      background-color: #fff;
+      font-size: clamp(14px, 13.029px + 0.259vw, 18px);
+      padding: clamp(10px, 7.573px + 0.647vw, 20px);
+    }
+  }
+}
+
+/*----------------------------
+管理画面カスタマイズ：
+お悩み、美容
+----------------------------*/
+.post-type-worries,
+.post-type-beauty {
+  img.alignleft {
+    float: left;
+    margin: 0 clamp(20px, 17.573px + 0.647vw, 30px) 10px 0;
+
+    @media (max-width: 767px) {
+      float: none;
+      margin: 0 0 clamp(20px, 17.573px + 0.647vw, 30px);
+      display: block;
+    }
+  }
+
+  p:has(img.alignleft) {
+    &::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
+
+  p {
+    font-size: clamp(14px, 13.029px + 0.259vw, 18px);
+    line-height: 1.7;
+    margin: 10px 0;
+  }
+
+  h3 {
+    font-family: var(--font-min);
+    font-weight: 500;
+    font-size: clamp(22px, 20.544px + 0.388vw, 28px);
+    color: #fff;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #C62C2B 0%, #E48180 100%);
+    padding: 10px 15px;
+    margin: clamp(40px, 35.146px + 1.294vw, 60px) 0 clamp(20px, 17.573px + 0.647vw, 30px);
+  }
+
+  h4 {
+    position: relative;
+    color: var(--color-beauty);
+    border-bottom: 1px var(--color-beauty) dashed;
+    padding-bottom: 10px;
+    padding-left: 43px;
+    margin-bottom: 30px;
+    font-family: var(--font-min);
+    font-weight: 500;
+    font-size: clamp(22px, 21.515px + 0.129vw, 24px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 40%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 34px;
+      aspect-ratio: 1 / 1;
+      background: url("../img/symbol-beauty.svg") center center / contain no-repeat;
+      display: inline-block;
+    }
+  }
+
+  h5 {
+    background-color: #FCF0F0;
+    font-family: var(--font-min);
+    font-weight: 500;
+    font-size: clamp(22px, 21.515px + 0.129vw, 24px);
+    color: var(--color-beauty);
+    border-left: 7px var(--color-beauty) solid;
+    padding: 5px 15px;
+    margin: 30px 0 20px;
+  }
+
+  h6 {
+    position: relative;
+    font-weight: normal;
+    font-size: clamp(14px, 13.029px + 0.259vw, 18px);
+    padding-left: 20px;
+    margin: 20px 0 clamp(5px, 3.786px + 0.324vw, 10px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      width: clamp(6px, 5.515px + 0.129vw, 8px);
+      aspect-ratio: 1 / 1;
+      display: inline-block;
+      background-color: var(--color-beauty);
+    }
+  }
+
+  li {
+    font-size: clamp(14px, 13.029px + 0.259vw, 18px);
+    list-style: none;
+  }
+
+  li+li {
+    margin-top: 5px;
+  }
+
+  ul {
+    padding-left: 0;
+
+    li {
+      position: relative;
+      padding-left: clamp(14px, 13.029px + 0.259vw, 18px);
+
+      &::before {
+        content: "・";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: clamp(14px, 13.029px + 0.259vw, 18px);
+        color: var(--color-beauty);
+      }
+    }
+  }
+
+  ol {
+    counter-reset: number;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      counter-increment: number;
+      position: relative;
+      padding-left: 1.75em;
+
+      &::before {
+        content: counter(number);
+        position: absolute;
+        left: 0;
+        top: 0.1em;
+        width: 1.6em;
+        height: 1.6em;
+        border-radius: 50%;
+        background: var(--color-beauty);
+        color: #fff;
+        font-size: 0.85em;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: var(--color-beauty);
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  a.btn-link {
+    position: relative;
+    border-radius: 4px;
+    background: #FFF;
+    text-decoration: none;
+    color: initial;
+    display: block;
+    max-width: 460px;
+    width: 100%;
+    box-shadow: 0 0 10px 0 #F6ECEC;
+    padding: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      background: url("data:image/svg+xml,%3Csvg width='25' height='5' viewBox='0 0 25 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 4.5H23.5L19.5 0.5' stroke='%23C62C2B' stroke-linecap='round'/%3E%3C/svg%3E%0A") center center / contain no-repeat;
+      width: 23px;
+      aspect-ratio: 23 / 4;
+      display: inline-block;
+    }
+  }
+
+  a.btn-link:hover {
+    opacity: 0.6;
+  }
+
+  table {
+    margin: 20px 0;
+    border: 1px var(--color-beauty) solid;
+
+    th {
+      border: 1px #F5D0D2 solid;
+      background-color: #FCF0F0;
+      font-size: clamp(14px, 13.029px + 0.259vw, 18px);
+      padding: clamp(10px, 7.573px + 0.647vw, 20px);
+      color: var(--color-beauty);
+      font-weight: normal;
+    }
+
+    td {
+      border: 1px #F5D0D2 solid;
+      background-color: #fff;
+      font-size: clamp(14px, 13.029px + 0.259vw, 18px);
+      padding: clamp(10px, 7.573px + 0.647vw, 20px);
+    }
+  }
+}
+
+/*----------------------------
+管理画面カスタマイズ：
+ブログ
+----------------------------*/
+.post-type-blog {
+  /* hr {
+    height: 0;
+    margin: 20px 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #9D7947;
+  } */
+}

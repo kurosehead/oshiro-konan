@@ -577,33 +577,6 @@ $(document).ready(function () {
 });
 
 /*==================================================
-featured-news-swiper
-==================================================*/
-var featured_news_swiper = new Swiper(".featured-news-swiper", {
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  speed: 500, //スライドアニメーションのスピード（ミリ秒）
-  spaceBetween: 50,
-  centeredSlides: true,
-  navigation: {
-    nextEl: ".featured-news-swiper-button-next",
-    prevEl: ".featured-news-swiper-button-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 4,
-    },
-    0: {
-      slidesPerView: 1.3,
-      spaceBetween: 30,
-    },
-  },
-});
-
-/*==================================================
 MV swiper
 ==================================================*/
 jQuery(function ($) {

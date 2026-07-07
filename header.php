@@ -73,7 +73,7 @@
       <?php if (!is_singular('general')): ?>
         <<?php echo $page_info['logo_tag']; ?> class="g-nav__logo">
           <a href="<?php echo home_url(); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-color.svg" alt="大城皮フ科クリニック">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo-color--konan.svg" alt="大城皮フ科クリニック 江南院">
           </a>
         </<?php echo $page_info['logo_tag']; ?>>
       <?php endif; ?>
@@ -588,11 +588,9 @@
             <div class="ham--banner sp">
               <ul class="banner__list">
                 <li class="banner__item">
-                  <a href="https://konan.oshiro-skin-clinic.com/" target="_blank">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-konan.webp" alt="江南院バナー"
-                      class="pc">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-konan_sp.webp" alt="江南院バナー"
-                      class="sp">
+                  <a href="https://oshiro-skin-clinic.com/" target="_blank">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-oguchi.webp" alt="江南院バナー" class="pc">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-oguchi_sp.webp" alt="江南院バナー" class="sp">
                   </a>
                 </li>
                 <li class="banner__item">
@@ -859,19 +857,15 @@
             <div class="ham--banner pc">
               <ul class="banner__list">
                 <li class="banner__item">
-                  <a href="https://konan.oshiro-skin-clinic.com/" target="_blank">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-konan.webp" alt="江南院バナー"
-                      class="pc">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-konan_sp.webp" alt="江南院バナー"
-                      class="sp">
+                  <a href="https://oshiro-skin-clinic.com/" target="_blank">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-oguchi.webp" alt="江南院バナー" class="pc">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-oguchi_sp.webp" alt="江南院バナー" class="sp">
                   </a>
                 </li>
                 <li class="banner__item">
                   <a href="https://oshiro-skin-clinic.shop/" target="_blank">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-online-store.webp"
-                      alt="オンラインストアバナー" class="pc">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-online-store_sp.webp"
-                      alt="オンラインストアバナー" class="sp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-online-store.webp" alt="オンラインストアバナー" class="pc">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-online-store_sp.webp" alt="オンラインストアバナー" class="sp">
                   </a>
                 </li>
               </ul>
