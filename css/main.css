@@ -25,6 +25,10 @@ root
   --color-purple-300: #aca6b2;
   --color-purple-100: #e8e4ed;
   --color-purple-50: #f2f0f3;
+
+  /* グラデ */
+  --gradient-konan: linear-gradient(90deg, #9371a8 0%, #b49bc4 100%);
+  --gradient-oguchi: linear-gradient(270deg, #ffae7b 0%, #f87979 100%);
 }
 
 /*--------------------
@@ -1149,14 +1153,19 @@ header {
 
 /* ご予約・お問い合わせ */
 .common__btn-contact {
-  a {
+  a,
+  button {
     display: flex;
     gap: 6px;
     border-radius: 100px;
-    background: linear-gradient(270deg, #FFAE7B 0%, #F87979 100%);
+    background: var(--gradient-konan);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
     padding: clamp(12px, 5.478px + 0.652vw, 18px) clamp(25px, 19.565px + 0.543vw, 30px);
     align-items: center;
+    border: 0;
+    cursor: pointer;
+    appearance: none;
+    font: inherit;
 
     img {
       width: 22px;
@@ -1205,8 +1214,9 @@ header {
 }
 
 .beauty__btn-contact {
-  a {
-    background: linear-gradient(90deg, #9371A8 0%, #B49BC4 100%);
+  a,
+  button {
+    background: var(--gradient-oguchi);
   }
 }
 
@@ -1235,12 +1245,13 @@ header {
   .common__btn-contact {
     width: 100%;
 
-    a {
+    .reservation-modal__trigger {
       padding: 15px;
       border-radius: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 100%;
     }
   }
 
@@ -1260,9 +1271,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg,
-      rgba(248, 121, 121, 1) 0%,
-      rgba(255, 174, 123, 1) 100%);
+  background: var(--gradient-oguchi);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 
@@ -8271,6 +8280,7 @@ footer {
               overflow: hidden;
               display: flex;
               flex-direction: column;
+              width: min(335px, 100%);
 
               .reservation__ttl {
                 font-family: var(--font-min);
@@ -8285,6 +8295,12 @@ footer {
                 @media (max-width: 767px) {
                   margin: 10px 30px 15px;
                 }
+
+              }
+
+              .txt {
+                text-align: center;
+                margin-bottom: 1.5em;
               }
 
               .list-square {
@@ -8322,37 +8338,6 @@ footer {
 
                   &:hover {
                     filter: brightness(1.1);
-                  }
-                }
-              }
-
-              &.box-web {
-                width: 260px;
-
-                @media (max-width: 767px) {
-                  width: 100%;
-                }
-
-                .web-txt {
-                  text-align: center;
-                  margin-bottom: 15px;
-                }
-              }
-
-              &.box-tel {
-                width: 260px;
-                margin-top: 40px;
-
-                @media (max-width: 767px) {
-                  width: 100%;
-                }
-
-                .tel-txt {
-                  text-align: center;
-                  margin-bottom: 50px;
-
-                  @media (max-width: 767px) {
-                    margin-bottom: 15px;
                   }
                 }
               }
@@ -8427,6 +8412,10 @@ footer {
               img {
                 border-radius: 4px;
               }
+            }
+
+            .list-dot+.txt {
+              margin-top: 0.5em;
             }
           }
 

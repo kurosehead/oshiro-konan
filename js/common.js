@@ -905,19 +905,42 @@ $(function () {
 予約モーダルopen/close
 ==================================================*/
 jQuery(function ($) {
-  $('.reservation-modal__open a, .reservation-modal__open').on('click', function (e) {
+  const getReservationModalTabIndex = function (clinic) {
+    return clinic === 'oguchi' ? 0 : 1;
+  };
+
+  $('.reservation-modal__open').on('click', function (e) {
     e.preventDefault();
-    $('.reservation-modal').fadeIn(300);
+
+    const clinic = $(this).data('reservationClinic') || 'konan';
+    const $modal = $('.reservation-modal[data-reservation-clinic="' + clinic + '"]');
+
+    if (!$modal.length) {
+      return;
+    }
+
+    $modal.fadeIn(300, function () {
+      if (window.innerWidth > 767) {
+        return;
+      }
+
+      const tabIndex = getReservationModalTabIndex(clinic);
+      const $tab = $modal.find('.reservation-modal__tab[data-tab-index="' + tabIndex + '"]');
+
+      if ($tab.length) {
+        $tab.trigger('click');
+      }
+    });
   });
 
   $('.reservation-modal__close').on('click', function (e) {
     e.preventDefault();
-    $('.reservation-modal').fadeOut(300);
+    $(this).closest('.reservation-modal').fadeOut(300);
   });
 
   $('.reservation-modal').on('click', function (e) {
     if (!$(e.target).closest('.reservation-modal__inner').length) {
-      $('.reservation-modal').fadeOut(300);
+      $(this).fadeOut(300);
     }
   });
 });
@@ -927,60 +950,77 @@ jQuery(function ($) {
 予約モーダル内タブ切り替え/SP
 ==================================================*/
 jQuery(function ($) {
-  var $modalInner = $('.reservation-modal__inner');
-  var $sections = $('.reservation-modal__section');
+  const initializeReservationModalTabs = function ($modal) {
+    const $modalInner = $modal.find('.reservation-modal__inner');
+    const $sections = $modal.find('.reservation-modal__section');
 
-  if (!$modalInner.length || $sections.length < 2) return;
+    if (!$modalInner.length || $sections.length < 2) return;
+    if ($modalInner.find('.reservation-modal__tabs').length) return;
 
-  var $tabWrap = $('<div class="reservation-modal__tabs"></div>');
+    const $tabWrap = $('<div class="reservation-modal__tabs"></div>');
 
-  $sections.each(function (index) {
-    var title = $(this).find('.reservation-modal__heading').first().text().trim();
-    var tabTitle = title;
+    $sections.each(function (index) {
+      let title = $(this).find('.reservation-modal__heading').first().text().trim();
+      let tabTitle = title;
 
-    if (window.innerWidth <= 767) {
-      if (title === '保険診療予約') {
-        tabTitle = '保険診療<br>予約';
-      } else if (title === '美容カウンセリング予約') {
-        tabTitle = '美容カウンセリング<br>予約';
+      if (window.innerWidth <= 767) {
+        if (title === '保険診療予約') {
+          tabTitle = '保険診療<br>予約';
+        } else if (title === '美容カウンセリング予約') {
+          tabTitle = '美容カウンセリング<br>予約';
+        }
       }
-    }
 
-    var activeClass = index === 0 ? ' is-active' : '';
-    var $tab = $('<button type="button" class="reservation-modal__tab' + activeClass + '" data-tab-index="' + index + '">' + tabTitle + '</button>');
+      const activeClass = index === 0 ? ' is-active' : '';
+      const $tab = $('<button type="button" class="reservation-modal__tab' + activeClass + '" data-tab-index="' + index + '">' + tabTitle + '</button>');
 
-    $tabWrap.append($tab);
+      $tabWrap.append($tab);
 
-    if (index !== 0) {
-      $(this).addClass('is-hidden-sp');
-    }
-  });
+      if (index !== 0) {
+        $(this).addClass('is-hidden-sp');
+      }
+    });
 
-  $modalInner.prepend($tabWrap);
+    $modalInner.prepend($tabWrap);
 
-  $tabWrap.on('click', '.reservation-modal__tab', function () {
-    if (window.innerWidth > 767) return;
+    $tabWrap.on('click', '.reservation-modal__tab', function () {
+      if (window.innerWidth > 767) return;
 
-    var index = $(this).data('tab-index');
+      const index = $(this).data('tab-index');
 
-    $tabWrap.find('.reservation-modal__tab').removeClass('is-active');
-    $(this).addClass('is-active');
-
-    $sections.addClass('is-hidden-sp');
-    $sections.eq(index).removeClass('is-hidden-sp');
-  });
-
-  function toggleTabMode() {
-    if (window.innerWidth > 767) {
-      $sections.removeClass('is-hidden-sp');
-    } else {
-      var activeIndex = $tabWrap.find('.reservation-modal__tab.is-active').data('tab-index');
-      if (activeIndex === undefined) activeIndex = 0;
+      $tabWrap.find('.reservation-modal__tab').removeClass('is-active');
+      $(this).addClass('is-active');
 
       $sections.addClass('is-hidden-sp');
-      $sections.eq(activeIndex).removeClass('is-hidden-sp');
-    }
-  }
+      $sections.eq(index).removeClass('is-hidden-sp');
+    });
+  };
+
+  const toggleTabMode = function () {
+    $('.reservation-modal').each(function () {
+      const $modal = $(this);
+      const $sections = $modal.find('.reservation-modal__section');
+      const $tabWrap = $modal.find('.reservation-modal__tabs');
+
+      if (!$sections.length || !$tabWrap.length) {
+        return;
+      }
+
+      if (window.innerWidth > 767) {
+        $sections.removeClass('is-hidden-sp');
+      } else {
+        let activeIndex = $tabWrap.find('.reservation-modal__tab.is-active').data('tab-index');
+        if (activeIndex === undefined) activeIndex = 0;
+
+        $sections.addClass('is-hidden-sp');
+        $sections.eq(activeIndex).removeClass('is-hidden-sp');
+      }
+    });
+  };
+
+  $('.reservation-modal').each(function () {
+    initializeReservationModalTabs($(this));
+  });
 
   toggleTabMode();
   $(window).on('resize', toggleTabMode);
