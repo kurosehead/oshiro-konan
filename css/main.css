@@ -13,9 +13,18 @@ root
 --------------------*/
 :root {
   --font-min: "Shippori Mincho", serif;
-  --color-ttl: #432815;
+  --color-ttl: #404040;
   --color-general: #d6822f;
   --color-beauty: #c62c2b;
+  /* 紫系 */
+  --color-purple-900: #766287;
+  --color-purple-800: #7b718d;
+  --color-purple-600: #ae9ec9;
+  --color-purple-500: #a69db5;
+  --color-purple-400: #aaa2b9;
+  --color-purple-300: #aca6b2;
+  --color-purple-100: #e8e4ed;
+  --color-purple-50: #f2f0f3;
 }
 
 /*--------------------
@@ -3777,10 +3786,7 @@ footer {
 
           a {
             display: block;
-
-            @media (max-width: 767px) {
-              width: 30px;
-            }
+            width: 100%;
 
             &:hover {
               opacity: 0.8;
@@ -7527,6 +7533,7 @@ footer {
 
           img {
             width: 100%;
+            border-radius: 4px;
           }
         }
 
