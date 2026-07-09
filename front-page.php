@@ -863,19 +863,19 @@
         <div class="blog__btn btn-more--underline">
           <a href="<?php echo home_url(); ?>/genre/blog/">もっと見る</a>
         </div>
+      <?php endif;
+      wp_reset_postdata(); ?>
     </section>
   </div>
-<?php endif;
-      wp_reset_postdata(); ?>
 
-<section class="top--banner-recruit">
-  <div class="container">
-    <a href="/recruit/">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/banner-recruit.webp" alt="求人バナーPC" class="pc">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/banner-recruit_sp.webp" alt="求人バナーSP" class="sp">
-    </a>
-  </div>
-</section>
+  <section class="top--banner-recruit">
+    <div class="container">
+      <a href="/recruit/">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/banner-recruit.webp" alt="求人バナーPC" class="pc">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/banner-recruit_sp.webp" alt="求人バナーSP" class="sp">
+      </a>
+    </div>
+  </section>
 
 </main>
 
