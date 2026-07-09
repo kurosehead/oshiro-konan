@@ -5,7 +5,7 @@
   <div class="top--mv">
     <p class="mv__logo">
       <a href="<?php echo home_url(); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.svg" alt="大城皮フ科クリニック">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/logo_white--konan.svg" alt="大城皮フ科クリニック江南院">
       </a>
     </p>
 
@@ -125,24 +125,92 @@
               <td class="off">ー</td>
             </tr>
             <tr>
-              <th>15:30~<br class="sp">18:30</th>
+              <th>14:00~<br class="sp">17:00</th>
               <td class="on">〇</td>
               <td class="on">〇</td>
               <td class="on">〇</td>
               <td class="off">ー</td>
               <td class="on">〇</td>
-              <td class="on red">〇</td>
+              <td class="off">ー</td>
               <td class="off">ー</td>
             </tr>
           </tbody>
         </table>
-        <p class="notes red">土曜日の午後は、14：00〜17：00までとなります。</p>
-        <p class="notes">【休診日】木曜、日曜、祝日</p>
-        <p class="notes">受付時間が過ぎても診察が続いている場合、ご予約をされている患者さまに限り午前は12：30まで、午後は19：00まで（土曜は17：30まで）</p>
-        <p class="notes">美容カウンセリング受付時間は、通常の診療時間より各枠30分早く終了します。</p>
+        <p class="notes">【休診日】木・土・日</p>
+        <p class="notes">受付時間が過ぎても診察が続いている場合、ご予約されている患者さまに限り午前は12:00まで、午後は17:30まで</p>
       </div>
     </section>
   </div>
+
+  <!-- 勤務医カレンダー -->
+  <section class="top--calendar">
+    <div class="container">
+      <h2 class="sec-ttl">CALENDAR</h2>
+      <div class="top-calendar__calendar">
+        <ul class="top-calendar__doctor-list" aria-label="勤務医アイコンの説明">
+          <li class="top-calendar__doctor top-calendar__doctor--man">
+            <img
+              class="top-calendar__doctor-icon"
+              src="<?php echo get_template_directory_uri(); ?>/img/icon_oshiro.svg" alt="">
+            <span class="top-calendar__doctor-name">大城医師</span>
+          </li>
+          <li class="top-calendar__doctor top-calendar__doctor--man">
+            <img
+              class="top-calendar__doctor-icon"
+              src="<?php echo get_template_directory_uri(); ?>/img/icon_shibata.svg" alt="">
+            <span class="top-calendar__doctor-name">柴田医師</span>
+          </li>
+          <li class="top-calendar__doctor top-calendar__doctor--man">
+            <img
+              class="top-calendar__doctor-icon"
+              src="<?php echo get_template_directory_uri(); ?>/img/icon_takeuchi.svg" alt="">
+            <span class="top-calendar__doctor-name">竹内医師</span>
+          </li>
+          <li class="top-calendar__doctor top-calendar__doctor--woman">
+            <img
+              class="top-calendar__doctor-icon"
+              src="<?php echo get_template_directory_uri(); ?>/img/icon_nagata.svg" alt="">
+            <span class="top-calendar__doctor-name">永田医師</span>
+          </li>
+          <li class="top-calendar__doctor top-calendar__doctor--woman">
+            <img
+              class="top-calendar__doctor-icon"
+              src="<?php echo get_template_directory_uri(); ?>/img/icon_kamata.svg" alt="">
+            <span class="top-calendar__doctor-name">鎌田医師</span>
+          </li>
+        </ul>
+
+        <div class="top-calendar__list">
+          <section class="top-calendar__item" aria-labelledby="calendar-202607">
+            <h3 class="top-calendar__month" id="calendar-202607">
+              <time datetime="2026-07">2026年 7月</time>
+            </h3>
+
+            <figure class="top-calendar__figure">
+              <img
+                class="top-calendar__image"
+                src="<?php echo get_template_directory_uri(); ?>/img/calendar/202607.webp"
+                alt="2026年7月の勤務医カレンダー">
+            </figure>
+          </section>
+
+          <section class="top-calendar__item" aria-labelledby="calendar-202608">
+            <h3 class="top-calendar__month" id="calendar-202608">
+              <time datetime="2026-08">2026年 8月</time>
+            </h3>
+
+            <figure class="top-calendar__figure">
+              <img
+                class="top-calendar__image"
+                src="<?php echo get_template_directory_uri(); ?>/img/calendar/202608.webp"
+                alt="2026年8月の勤務医カレンダー">
+            </figure>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- ACCESS -->
   <section class="top--access" id="anchor-access">
@@ -150,17 +218,14 @@
       <h2 class="sec-ttl">ACCESS</h2>
       <div class="map-area">
         <div class="illust-map">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/illust-map.webp" alt="地図イラスト">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/illust-map--konan.webp" alt="地図イラスト">
         </div>
         <div class="google-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26041.134049942437!2d136.89518235215982!3d35.327301186563226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003096c56bb6849%3A0x41249c2038c752fa!2z5aSn5Z-O55qu44OV56eR44Kv44Oq44OL44OD44Kv5aSn5Y-j5pys6Zmi!5e0!3m2!1sja!2sjp!4v1758015203842!5m2!1sja!2sjp"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.0100983395123!2d136.8764842!3d35.355395699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600309f290da99e7%3A0x8017623685107c23!2z5aSn5Z-O55qu44OV56eR44Kv44Oq44OL44OD44Kv5rGf5Y2X6Zmi!5e0!3m2!1sja!2sjp!4v1783580355946!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
       </div>
       <div class="btn-more">
-        <a href="https://maps.app.goo.gl/6V6FWP1YcmwqtLb78" target="_blank">Googleマップを見る</a>
+        <a href="https://maps.app.goo.gl/gr4bZZkCGaePdeK88" target="_blank">Googleマップを見る</a>
       </div>
     </div>
   </section>
@@ -175,13 +240,11 @@
       <p class="promise__lead">すべての方に、信頼の医療を。</p>
       <p class="promise__lead-sub">赤ちゃんからご高齢の方まで、<br>肌のお悩みに誠実に向き合います。</p>
       <p class="promise__txt txt">
-        地域の皆さまの「皮膚のかかりつけ医」として適切な医療をお届けすることをお約束します。<br>
-        「日本で一番患者様想いの皮膚科に」「地域の皆様に気軽に最新の医療を」という思いを胸に、<br>
-        皆様が気軽に最新の医療にアクセスできる場をつくることを大切にしてきました。<br>
-        <br>
-        今後も、専門性を活かしつつ、一人ひとりの声に耳を傾けた丁寧な診療を心がけ、<br>
-        皆さまに「ここに来てよかった」と思っていただけるクリニックを目指してまいります。<br>
-        肌のことで少しでも気になることがあれば、どうぞお気軽にご相談ください。
+        もう一度、江南市の皆さまのお肌を支えたい。<br>
+        大口本院への通院が難しかった方々のために、的確な診断を支える設備と、<br>
+        お迎え前やお仕事の間にも立ち寄りやすい「14時開始の午後診療」で、<br>
+        暮らしに寄り添う安心を提供します。<br>
+        どんな小さなお悩みも、確かな技術でお応えいたします。
       </p>
       <div class="promise__obj-sp">
         <img src="<?php echo get_template_directory_uri(); ?>/img/promise-obj_sp.webp" alt="">
@@ -199,7 +262,7 @@
       <!-- features01 -->
       <div class="features__item">
         <div class="features__head">
-          <h3 class="features__ttl">豊富な実績と確かな信頼を誇る、<br>皮膚科クリニック</h3>
+          <h3 class="features__ttl">再び江南市の<br>かかりつけ皮膚科へ</h3>
           <div class="features__num">1</div>
         </div>
         <div class="features__img">
@@ -207,8 +270,9 @@
         </div>
         <div class="features__panel">
           <p class="txt">
-            あらゆる皮膚の悩みに高いレベルで対応できるメガスケールのクリニックです。多数の皮膚科専門医が在籍し、一般診療から小手術・美容皮膚科まで一院完結でサポート。多様なお悩みに一貫して向き合うことができます。
-            どんな皮膚の悩みも、“まずはここに相談すれば安心”と思っていただけるクリニックをめざしています。
+            「大口本院は遠くて通いづらい」というお声を頂戴することも多かったため、もう一度江南市で診療を行い、地域のお役に立ちたいと戻ってまいりました。<br>
+            江南院で、本院と同水準の安心できる皮膚科診療をお届けします。<br>
+            皆さまに寄り添う身近なクリニックとして、どんなことでもご相談ください。
           </p>
         </div>
         <div class="num01-img-area">
@@ -239,10 +303,10 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/img/switching-frame01_sp.webp" alt="">
               </div>
               <h4 class="switching-frame__ttl">
-                医師の診察前にスタッフが<br class="pc">丁寧に症状をお伺いします
+                診察の前に、スタッフが事前に症状や<br class="sp">お悩みをお伺いします
               </h4>
               <p class="switching-frame__txt">
-                医師の診察の前に、経験豊富なスタッフが問診票をもとに症状やお悩みを丁寧にお伺いします。気になる症状の経過や、生活習慣・スキンケア方法なども確認し、診察がスムーズに進むよう準備を整えます。患者さま一人ひとりの思いに寄り添い、不安や疑問を安心に変える丁寧な対応を心がけています。
+                医師の診察前に、スタッフが患者様の現在の状態やご要望をお聞きいたします。お話しいただいた内容はしっかりと医師に引き継ぎますので、気になる点や不安なことはどうぞ遠慮なくお伝えください。
               </p>
             </div>
 
@@ -252,10 +316,10 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/img/switching-frame02_sp.webp" alt="">
               </div>
               <h4 class="switching-frame__ttl">
-                医師による診察と患者さま一人ひとりに<br class="pc">合った治療のご提案
+                お一人おひとりに寄り添い、<br>最適な皮膚科治療をお届けします。
               </h4>
               <p class="switching-frame__txt">
-                患者さまの症状に合わせた治療をご提案いたします。皮膚科専門医が疾患・治療について丁寧に説明し、患者さまの症状改善、求める肌づくりができるようサポートいたします。学会や講習会にも積極的に参加し、新しい治療や薬に関する知識を深めています。
+                当院では皮膚科専門医が患者さまの症状を詳しく診察し、最適な治療法をご提案いたします。疾患やケアについて分かりやすく説明し、肌トラブルの改善と理想の肌づくりをサポート。常に最善の医療をお届けできるよう、学会や講習会へ積極的に参加し、新しい治療や薬の知識向上に努めております。
               </p>
             </div>
 
@@ -265,10 +329,10 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/img/switching-frame03_sp.webp" alt="">
               </div>
               <h4 class="switching-frame__ttl">
-                看護師からの説明と<br class="pc">丁寧なホームケア指導
+                看護師によるお薬の塗り方と、<br>安心のホームケア指導
               </h4>
               <p class="switching-frame__txt">
-                皮膚疾患の治療は、「正しい方法で、継続して、外用薬を塗る」ことが重要になります。「初めて」または「久しぶり」にご来院された患者さまには、ご自宅で正しく外用薬を使用できるよう、塗り方のアドバイスや指導を行います。説明の際はパンフレットを使用し、「分かりやすい指導」にも努めています。
+                皮膚疾患をしっかりと治すためには、毎日の正しい外用ケアの継続が欠かせません。初めての方や久しぶりにご来院された方が、ご自宅でも迷わずにお薬を使えるよう、看護師が塗り方のコツを丁寧に指導いたします。パンフレット等も活用し、どなたでも分かりやすい安心のサポートを心がけています。
               </p>
             </div>
 
@@ -278,10 +342,10 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/img/switching-frame04_sp.webp" alt="">
               </div>
               <h4 class="switching-frame__ttl">
-                必要に応じた処置・検査も<br class="pc">丁寧に対応します
+                必要に応じた検査や処置も<br>丁寧に行います
               </h4>
               <p class="switching-frame__txt">
-                採血・アレルギー検査・皮膚生検なども、患者さまの負担を最小限に抑えながら丁寧に行います。事前に検査内容や目的をわかりやすくご説明し、ご納得いただいたうえで実施します。安全で正確な検査を通じ、適切な診断と治療につなげます。
+                採血やアレルギー検査、皮膚生検などを行う際は、患者さまのご負担や痛みを最小限に抑えるよう細心の注意を払います。事前に目的や内容を分かりやすくお話しし、十分にご納得いただいた上で進めます。安全かつ精度の高い検査を通じて、正確な診断と適切な治療へと結びつけます。
               </p>
             </div>
           </div>
@@ -294,16 +358,16 @@
           </div>
         </div>
         <div class="features__panel switching-frame__btn">
-          <div class="btn" data-target="content1">医師の診察前にスタッフが丁寧に症状をお伺いします</div>
-          <div class="btn" data-target="content2">医師による診察と患者さま一人ひとりに合った治療のご提案</div>
-          <div class="btn" data-target="content3">看護師からの説明と丁寧なホームケア指導</div>
-          <div class="btn" data-target="content4">必要に応じた処置・検査も丁寧に対応します</div>
+          <div class="btn" data-target="content1">診察の前に、スタッフが事前に症状やお悩みをお伺いします </div>
+          <div class="btn" data-target="content2">お一人おひとりに寄り添い、最適な皮膚科治療をお届けします </div>
+          <div class="btn" data-target="content3">看護師によるお薬の塗り方と、安心のホームケア指導</div>
+          <div class="btn" data-target="content4">必要に応じた検査や処置も丁寧に行います </div>
         </div>
       </div>
       <!-- features03 -->
       <div class="features__item">
         <div class="features__head">
-          <h3 class="features__ttl">全国の医師が<br>学びに訪れる教育体制</h3>
+          <h3 class="features__ttl">病診連携・診診連携先の<br>江南厚生病院のすぐ隣</h3>
           <div class="features__num">3</div>
         </div>
         <div class="features__img">
@@ -311,186 +375,109 @@
         </div>
         <div class="features__panel">
           <p class="txt">
-            大城皮フ科クリニックでは、<span class="bold">診療・小手術・美容皮膚科の技術指導</span>にも力を入れています。
-            開院以来培ってきた知識と経験をもとに、これまで<span class="bold">多くの医師が当院の技術を学びに訪れています。</span>また医師向けの講演会やセミナーでも多数登壇しています。<br><br>
-            「ここに来れば自分に合った治療を受けられる」という安心のもと、専門的な知見に基づいた医療を、多彩な治療プランから選択することができます。</span>
+            当院は、院長がかつて勤務していた江南厚生病院のすぐ隣に位置しています。<br>
+            その深いご縁から緊密な病診連携体制を築いており、万が一高度な医療が必要な際もスムーズな対応が可能です。<br>
+            同院から徒歩１分という抜群のアクセスを活かし、地域の皆さまに安心して通っていただける質の高い医療を提供いたします。
           </p>
         </div>
       </div>
       <!-- features04 -->
       <div class="features__item">
         <div class="features__head">
-          <h3 class="features__ttl">美しさと癒しが融合する<br>特別な空間</h3>
+          <h3 class="features__ttl">待ち時間に配慮した工夫<br>午後診療は14時開始</h3>
           <div class="features__num">4</div>
         </div>
         <div class="features__img img-slider">
           <div class="slider-track">
-            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide01.webp"
-                alt=""></div>
-            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide02.webp"
-                alt=""></div>
-            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide03.webp"
-                alt=""></div>
-            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide04.webp"
-                alt=""></div>
-            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide05.webp"
-                alt=""></div>
-            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide06.webp"
-                alt=""></div>
-            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide01.webp"
-                alt=""></div>
-            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide02.webp"
-                alt=""></div>
-            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide03.webp"
-                alt=""></div>
-            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide04.webp"
-                alt=""></div>
-            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide05.webp"
-                alt=""></div>
-            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide06.webp"
-                alt=""></div>
+            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide01.webp" alt=""></div>
+            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide02.webp" alt=""></div>
+            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide03.webp" alt=""></div>
+            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide01.webp" alt=""></div>
+            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide02.webp" alt=""></div>
+            <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/img/features04-slide03.webp" alt=""></div>
           </div>
         </div>
         <div class="features__panel">
           <p class="txt">
-            2階の美容専用フロア「Chrono medical retreat」（クロノ・メディカル・リトリート）」は、
-            <span class="bold">医療×美容×癒しを融合した完全予約制・個室対応の特別な空間です。</span>美容皮膚科に精通した医師とスタッフが、最適な施術を行います。<br><br>
-            内装や照明、香りにもこだわり、非日常を感じながら “肌と心を整える時間”を、ぜひこの空間でご体感ください。
+            当院は近隣では数少ない「14時からの午後診療」を行っています。<br>
+            夕方の混雑する前の時間帯に通えるため、お子さまのお迎え前やお仕事の合間など、ご予定に合わせて時間を有効活用していただけます。<br>
+            他にはない通いやすさと質の高い医療を両立し、江南市の皆さまにストレスが少ない通院を提供できればと考えています。
           </p>
         </div>
       </div>
       <!-- features05 -->
       <div class="features__item">
         <div class="features__head">
-          <h3 class="features__ttl">KOLが厳選した美容機器で、<br>あらゆる肌のお悩みに対応</h3>
+          <h3 class="features__ttl">本院同等の皮膚科医療を江南市で<br>確かな診断を支える設備体制</h3>
           <div class="features__num">5</div>
         </div>
         <div class="features__panel">
           <p class="txt">
-            世界最大の美容機器メーカー、サイノシュア社・ルートロニック社のKOL（Key Opinion Leader）を務める院長が厳選した同社の機器を、1医院で最も多く導入。（17台）<br>
-            しみ・しわ・たるみ・ニキビ跡・赤ら顔・毛穴など、あらゆる肌トラブルに対して、機器ごとの特性を熟知した医師が、<span
-              class="bold">患者様のお悩みやご希望に合わせてオーダーメイド</span>で治療をご提案いたします。<br><br>
-            ※① 2026年5月末現在　サイノシュアー・ルートロニック社確認済み。
-            ※②スペクトラ4台・ヒーライトⅡ4台・モザイク3D2台・エコツーエボリューション1台・ラセムド1台・インフィニハイブリッド1台・XERF（ザーフ）1台・クラリティツイン2台　合計16台。
+            大口本院と同等の診療クオリティを江南市でお届けするため、充実の医療機器を整えました。<br>
+            皮膚エコーやダーモスコピーによる的確な診断をはじめ、迅速アレルギー検査（ドロップスクリーン）や光線療法（エキシプレックス）、ヒーライト、各種レーザーを完備。<br>
+            身近な江南院で、大城皮フ科グループならではの高水準の皮膚科医療を提供いたします。
           </p>
 
         </div>
         <div class="machine-slider">
           <ul class="machine-slider__list">
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img01.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img02.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img03.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img04.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img05.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img06.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img07.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img08.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img09.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img10.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img11.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img12.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img13.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img14.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img01.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img02.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img03.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img04.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img05.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img06.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img07.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img08.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img09.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img10.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img11.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img12.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img13.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img14.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img01.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img02.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img03.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img04.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img05.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img06.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img07.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img08.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img09.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img10.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img11.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img12.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img13.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img14.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img15.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img16.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img17.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img18.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img01.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img02.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img03.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img04.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img05.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img06.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img07.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img08.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img09.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img10.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img11.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img12.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img13.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img14.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img15.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img16.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img17.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img18.webp" alt=""></li>
           </ul>
           <ul class="machine-slider__list">
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img14.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img13.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img12.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img11.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img10.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img09.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img08.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img07.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img06.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img05.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img04.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img03.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img02.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img01.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img14.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img13.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img12.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img11.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img10.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img09.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img08.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img07.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img06.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img05.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img04.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img03.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img02.webp" alt=""></li>
-            <li class="machine-slider__item"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img01.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img18.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img17.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img16.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img15.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img14.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img13.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img12.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img11.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img10.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img09.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img08.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img07.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img06.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img05.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img04.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img03.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img02.webp" alt=""></li>
+            <li class="machine-slider__item"><img src="<?php echo get_template_directory_uri(); ?>/img/machine-slide_img01.webp" alt=""></li>
+
           </ul>
         </div>
 
@@ -509,19 +496,16 @@
     <div class="greeting__contents">
       <div class="greeting__message">
         <p class="txt">
-          幼いころから重度のアトピー性皮膚炎に悩み、今も治療を続けています。<br>
-          その頃に感じていた「こんなクリニックがあればいいのに」を実現したい。<br>
-          その一心で開業し、今も日々全力を尽くしています。<br><br>
-          皮膚科専門医としての科学的根拠を軸にしながら、患者さまの生活リズムやお気持ちに合わせた “気軽に続けられる医療”
-          を大切にしています。症状が改善したときは一緒に喜び合い、次の一歩への力にしていただければ幸いです。<br><br>
-
-          皮膚外科や美容医療では、安全性と自然な仕上がり を両立させることを信条に、日々研鑽を重ねています。必要なときに最善を尽くせるよう、スタッフ一同、技術と心配りの両面でお迎えいたします。<br><br>
-
-          「肌のことで困ったら、まずは大城皮フ科へ」 <br>
-          どうぞお気軽にご相談ください。
+          私の幼少期からの重度のアトピー経験を原点に「日本一患者さま想いのクリニック」を目指し、2016年に現在の江南院に大城皮フ科クリニックを開院しました。<br>
+          6万人以上の患者さまにご来院いただき手狭となったため、2023年10月に大口本院を開設し江南院を一時休診としていましたが、地域の皆さまのご要望を受け、2025年7月1日に再開、2026年4月1日より午前・午後のフル診療を再開いたしました。<br>
+          <br>
+          新たな江南院は、快適な診療空間への全面改装、50台の駐車場完備に加え、複数の皮膚科専門医が診察する体制へとパワーアップ。江南厚生病院徒歩1分の通いやすさはそのままに、よりスムーズで安心な医療環境を整えました。<br>
+          <br>
+          私が「自らが使いたい」という想いから開発した、敏感肌の方でも安心して使えるスキンケア「Chrono Verso（クロノバーソ）」の導入をはじめ、私たちは常に学び続け、あらゆる肌のお悩みに誠実に向き合います。<br>
+          新しく生まれ変わった江南院をよろしくお願いいたします。
         </p>
         <div class="name-area">
-          <p class="position">院長</p>
+          <p class="position">大城皮フ科クリニック大口本院院長/理事長</p>
           <p class="name">大城 宏治</p>
         </div>
       </div>
@@ -551,7 +535,7 @@
             <p class="our-team__item-category">皮膚科専門医</p>
           </div>
           <p class="our-team__item-message txt">
-            乾癬やアトピー性皮膚炎など専門性の高い皮膚疾患から美容診療まで幅広く対応。丁寧な診察を大切にし、一人ひとりに安心してご相談いただける診療を心がけています。
+            乾癬やアトピー性皮膚炎などの高い専門性を要する疾患から、一部自費の美容診療まで対応いたします。お一人おひとりの症状に深く向き合う丁寧な診察を徹底し、誰もが安心してお肌の悩みを相談できる医療環境の提供を常に心がけております。
           </p>
         </li>
         <li class="our-team__item">
@@ -563,7 +547,7 @@
             <p class="our-team__item-category">皮膚科専門医</p>
           </div>
           <p class="our-team__item-message txt">
-            赤ちゃんからご高齢の方まで幅広く診療し、一般皮膚科から美容皮膚科まで対応。地域に寄り添い、丁寧でわかりやすい診療で安心して相談できる環境を大切にしています。
+            小さなお子さまからご高齢の方まで、ご家族皆さまのお肌の健康を支えるパートナーとして、一般皮膚科・美容皮膚科の両面からサポートします。地域密着のクリニックとして、分かりやすく納得感のある説明を大切にし、心からリラックスして受診いただける体制を整えています。
           </p>
         </li>
         <li class="our-team__item">
@@ -575,7 +559,7 @@
             <p class="our-team__item-category">看護師</p>
           </div>
           <p class="our-team__item-message txt">
-            患者様に寄り添う気持ちを大切に、一般皮膚科から美容医療まで幅広く対応。温かなチームの中で学び続けながら、前向きな変化を支える看護を心がけています。
+            患者さまの心に寄り添う姿勢を礎に、保険診療から高度な美容医療まで多角的かつ誠実なアプローチを追求します。スタッフ一丸となって研鑽を積み、専門知識を共有しながら、お肌が良い方向へと変化していく過程を看護の面からも全力で支えてまいります。
           </p>
         </li>
         <li class="our-team__item">
@@ -587,7 +571,7 @@
             <p class="our-team__item-category">医療事務</p>
           </div>
           <p class="our-team__item-message txt">
-            来院される患者様が安心して過ごせるよう、笑顔と丁寧な対応を大切にしています。受付から診療まで、気持ちよく通っていただける環境づくりを心がけています。
+            来院される皆さまが心穏やかに過ごせるよう、常に笑顔と誠実な対応を追求しています。受付から診察、お会計にいたるまで、全てのプロセスで心地よさを感じていただける空間づくりに注力し、安心感と満足感を持ってお帰りいただけるクリニックを目指します。
           </p>
         </li>
       </ul>
@@ -721,7 +705,7 @@
 
         <!-- 美容皮膚科 -->
         <div class="menu__tab--panel panel-beauty tab__panel">
-
+          <?php get_template_part('template-parts/common/beauty-note-konan'); ?>
           <!-- ピックアップ -->
           <div class="menu__pickup-area">
             <div class="sec-ttl--bilingual-medium color-beauty">
@@ -795,11 +779,17 @@
       <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/img/loop-slider03.webp" alt=""></div>
       <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/img/loop-slider04.webp" alt=""></div>
       <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/img/loop-slider05.webp" alt=""></div>
+      <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/img/loop-slider06.webp" alt=""></div>
+      <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/img/loop-slider07.webp" alt=""></div>
+      <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/img/loop-slider08.webp" alt=""></div>
       <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/img/loop-slider01.webp" alt=""></div>
       <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/img/loop-slider02.webp" alt=""></div>
       <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/img/loop-slider03.webp" alt=""></div>
       <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/img/loop-slider04.webp" alt=""></div>
       <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/img/loop-slider05.webp" alt=""></div>
+      <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/img/loop-slider06.webp" alt=""></div>
+      <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/img/loop-slider07.webp" alt=""></div>
+      <div class="loop-item"><img src="<?php echo get_template_directory_uri(); ?>/img/loop-slider08.webp" alt=""></div>
     </div>
   </section>
 
@@ -870,7 +860,7 @@
 
   <section class="top--banner-recruit">
     <div class="container">
-      <a href="/recruit/">
+      <a href="https://oshiro-skin-clinic.com/recruit/" target="_blank">
         <img src="<?php echo get_template_directory_uri(); ?>/img/banner-recruit.webp" alt="求人バナーPC" class="pc">
         <img src="<?php echo get_template_directory_uri(); ?>/img/banner-recruit_sp.webp" alt="求人バナーSP" class="sp">
       </a>

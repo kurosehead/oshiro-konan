@@ -194,25 +194,25 @@
             <a href="<?php echo home_url(); ?>/visit/">初めての方へ</a>
           </li>
           <li>
-            <a href="<?php echo home_url(); ?>/case/">症例写真</a>
+            <a href="https://oshiro-skin-clinic.com/case/" target="_blank">症例写真</a>
           </li>
           <li>
-            <a href="<?php echo home_url(); ?>/price/">美容施術 料金表</a>
+            <a href="https://oshiro-skin-clinic.com/price/" target="_blank">美容施術 料金表</a>
           </li>
           <li>
-            <a href="<?php echo home_url(); ?>/doctors-cosme/">ドクターズコスメ</a>
+            <a href="https://oshiro-skin-clinic.com/doctors-cosme/" target="_blank">ドクターズコスメ</a>
           </li>
           <li>
-            <a href="<?php echo home_url(); ?>/recruit/">求人情報</a>
+            <a href="https://oshiro-skin-clinic.com/recruit/" target="_blank">求人情報</a>
           </li>
           <li>
-            <a href="<?php echo home_url(); ?>/faq/"> よくある質問</a>
+            <a href="https://oshiro-skin-clinic.com/faq/" target="_blank"> よくある質問</a>
           </li>
           <li>
-            <a href="<?php echo home_url(); ?>/genre/news/">お知らせ一覧</a>
+            <a href="https://oshiro-skin-clinic.com/genre/news/" target="_blank">お知らせ一覧</a>
           </li>
           <li>
-            <a href="<?php echo home_url(); ?>/genre/blog/">ブログ一覧</a>
+            <a href="https://oshiro-skin-clinic.com/genre/blog/" target="_blank">ブログ一覧</a>
           </li>
         </ul>
       </div>
@@ -220,16 +220,16 @@
         <p class="sitemap__block-ttl">診療科目</p>
         <ul class="list-arrow">
           <li>
-            <a href="<?php echo home_url(); ?>/general/">一般皮膚科</a>
+            <a href="https://oshiro-skin-clinic.com/general/" target="_blank">一般皮膚科</a>
           </li>
           <li>
-            <a href="<?php echo home_url(); ?>/child/">小児皮膚科</a>
+            <a href="https://oshiro-skin-clinic.com/child/" target="_blank">小児皮膚科</a>
           </li>
           <li>
-            <a href="<?php echo home_url(); ?>/surgery/">皮膚外科/形成外科</a>
+            <a href="https://oshiro-skin-clinic.com/surgery/" target="_blank">皮膚外科/形成外科</a>
           </li>
           <li>
-            <a href="<?php echo home_url(); ?>/beauty/">美容皮膚科</a>
+            <a href="https://oshiro-skin-clinic.com/beauty/" target="_blank">美容皮膚科</a>
           </li>
         </ul>
       </div>
