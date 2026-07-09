@@ -15599,7 +15599,7 @@ sidebar-leftを持つページ
     aspect-ratio: 1;
     display: grid;
     place-content: center;
-    background: url("../img/access/symbol-efeae6.svg") center / contain no-repeat;
+    background: url("../img/access/symbol-ddd1e3.svg") center / contain no-repeat;
   }
 
   .common-modal__step-body:has(.common-modal__step-figure) {
