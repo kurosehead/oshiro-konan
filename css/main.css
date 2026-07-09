@@ -15210,7 +15210,7 @@ sidebar-leftを持つページ
 
   /* アクセス方法 */
   .sec--access-methods {
-    background: #f3f0f0;
+    background: var(--color-purple-50);
     padding-top: clamp(40px, 30.291px + 2.589vw, 80px);
     padding-bottom: clamp(22px, -9.068px + 8.285vw, 150px);
   }
@@ -15253,7 +15253,7 @@ sidebar-leftを持つページ
     }
 
     &:hover:after {
-      background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11' r='11' fill='%23432815'/%3E%3Cpath d='M17.5303 8.46967C17.8232 8.76256 17.8232 9.23732 17.5303 9.53022L11.0001 16.0605L4.46978 9.53022C4.17689 9.23732 4.17689 8.76256 4.46978 8.46967C4.76268 8.17678 5.23744 8.17678 5.53033 8.46967L11.0001 13.9394L16.4698 8.46967C16.7627 8.17678 17.2374 8.17678 17.5303 8.46967Z' fill='white'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='11' cy='11' r='11' fill='%23ae9ec9'/%3E%3Cpath d='M17.5303 8.46967C17.8232 8.76256 17.8232 9.23732 17.5303 9.53022L11.0001 16.0605L4.46978 9.53022C4.17689 9.23732 4.17689 8.76256 4.46978 8.46967C4.76268 8.17678 5.23744 8.17678 5.53033 8.46967L11.0001 13.9394L16.4698 8.46967C16.7627 8.17678 17.2374 8.17678 17.5303 8.46967Z' fill='white'/%3E%3C/svg%3E");
       transition: ease-in 0.2s;
     }
   }
@@ -15324,7 +15324,7 @@ sidebar-leftを持つページ
     margin: 0;
 
     span {
-      color: var(--color-general);
+      color: var(--color-purple-900);
     }
   }
 
@@ -15339,8 +15339,6 @@ sidebar-leftを持つページ
   /* 車ルート */
   .access-methods__car-route-list {
     display: grid;
-    grid-template-rows: repeat(5, auto);
-    grid-auto-flow: column;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px 20px;
 
@@ -15378,7 +15376,7 @@ sidebar-leftを持つページ
     margin: 0;
     border-inline: 1px dotted #9e8d85;
     text-align: center;
-    color: var(--color-general);
+    color: var(--color-purple-900);
     display: grid;
     align-items: center;
   }
@@ -15395,7 +15393,7 @@ sidebar-leftを持つページ
     padding: 0;
 
     &:hover {
-      color: var(--color-general);
+      color: var(--color-purple-900);
     }
 
     &::after {
@@ -15413,9 +15411,9 @@ sidebar-leftを持つページ
   /* バスルート */
   .access-methods__bus-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(387px, 1fr));
+    grid-template-columns: repeat(auto-fit, 387px);
     gap: clamp(10px, 7.573px + 0.647vw, 20px);
-    justify-content: center;
+    justify-content: start;
 
     @media (max-width: 900px) {
       grid-template-columns: min(100%, 89.33vw, 387px);
@@ -15432,7 +15430,7 @@ sidebar-leftを持つページ
   }
 
   .access-methods__bus-head {
-    background: linear-gradient(180deg, #f39696 0%, #f06e6e 100%);
+    background: linear-gradient(180deg, #84a2da 0%, #4f77be 100%);
     text-align: center;
     padding: 0.5em;
     border-radius: 4px 4px 0 0;
@@ -15481,7 +15479,7 @@ sidebar-leftを持つページ
   .access-methods__bus-time {
     margin: 0;
     font-weight: 500;
-    color: #f06e6e;
+    color: #5078bf;
 
     .access-methods__bus-card--kashiwamori & {
       color: #ee906a;
@@ -15498,9 +15496,9 @@ sidebar-leftを持つページ
   }
 
   .access-methods__bus-route-link {
-    background: #ffeded;
+    background: #e4eeff;
     padding: 0.3em 0.75em;
-    color: #f06e6e;
+    color: #5078bf;
     display: flex;
     justify-content: space-between;
     border-radius: 4px;
