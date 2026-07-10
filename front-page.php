@@ -36,12 +36,6 @@
               <img src="<?php echo get_template_directory_uri(); ?>/img/top/mv04.webp" alt="">
             </picture>
           </li>
-          <li class="swiper-slide">
-            <picture>
-              <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/img/top/mv05_sp.webp">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/top/mv05.webp" alt="">
-            </picture>
-          </li>
         </ul>
       </div>
       <div class="mv__overlay" aria-hidden="true"></div>
@@ -181,8 +175,8 @@
         </ul>
 
         <div class="top-calendar__list">
-          <section class="top-calendar__item" aria-labelledby="calendar-202607">
-            <h3 class="top-calendar__month" id="calendar-202607">
+          <section class="top-calendar__item" aria-labelledby="calendarMonth1">
+            <h3 class="top-calendar__month" id="calendarMonth1">
               <time datetime="2026-07">2026年 7月</time>
             </h3>
 
@@ -194,8 +188,8 @@
             </figure>
           </section>
 
-          <section class="top-calendar__item" aria-labelledby="calendar-202608">
-            <h3 class="top-calendar__month" id="calendar-202608">
+          <section class="top-calendar__item" aria-labelledby="calendarMonth2">
+            <h3 class="top-calendar__month" id="calendarMonth2">
               <time datetime="2026-08">2026年 8月</time>
             </h3>
 
@@ -489,7 +483,7 @@
     <div class="greeting__head">
       <div class="sec-ttl--bilingual">
         <p class="en">GREETING</p>
-        <h2 class="ja">院長からのご挨拶</h2>
+        <h2 class="ja">理事長からのご挨拶</h2>
         <p class="copy">患者さまの目線に立った、<br>確かな皮膚科医療を。</p>
       </div>
     </div>

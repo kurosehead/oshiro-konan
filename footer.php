@@ -236,9 +236,7 @@
     </div>
   </div>
 
-  <div class="copyright">Copyright © 2018-2025 Oshiro Skin Clinic.
-    <br class="sp">All Rights Reserved.
-  </div>
+  <div class="copyright">Copyright © 2018-<?php echo date('Y'); ?> Oshiro Skin Clinic. <br class="sp">All Rights Reserved.</div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
