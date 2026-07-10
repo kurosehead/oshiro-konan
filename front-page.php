@@ -175,8 +175,14 @@
         </ul>
 
         <div class="top-calendar__list">
-          <section class="top-calendar__item" aria-labelledby="calendarMonth1">
+          <section class="top-calendar__item is-active" aria-labelledby="calendarMonth1">
             <h3 class="top-calendar__month" id="calendarMonth1">
+              <button
+                type="button"
+                class="top-calendar__month-arrow top-calendar__month-arrow--next"
+                aria-label="次の月を表示">
+                <span aria-hidden="true"></span>
+              </button>
               <time datetime="2026-07">2026年 7月</time>
             </h3>
 
@@ -190,6 +196,12 @@
 
           <section class="top-calendar__item" aria-labelledby="calendarMonth2">
             <h3 class="top-calendar__month" id="calendarMonth2">
+              <button
+                type="button"
+                class="top-calendar__month-arrow top-calendar__month-arrow--prev"
+                aria-label="前の月を表示">
+                <span aria-hidden="true"></span>
+              </button>
               <time datetime="2026-08">2026年 8月</time>
             </h3>
 

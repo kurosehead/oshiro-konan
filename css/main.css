@@ -2271,6 +2271,16 @@ header {
     }
   }
 
+  .top-calendar__item {
+    @media (max-width: 767px) {
+      display: none;
+
+      &.is-active {
+        display: block;
+      }
+    }
+  }
+
   .top-calendar__month {
     color: var(--color-ttl);
     font-size: clamp(18px, 16.544px + 0.388vw, 24px);
@@ -2278,6 +2288,39 @@ header {
     font-weight: 400;
     width: fit-content;
     margin: 0 auto min(20px, 5.33vw);
+    position: relative;
+  }
+
+  .top-calendar__month-arrow {
+    display: none;
+
+    @media (max-width: 767px) {
+      display: block;
+      position: absolute;
+      appearance: none;
+      border: 0;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+      font: inherit;
+      line-height: 1;
+      color: inherit;
+      width: 0.833em;
+      aspect-ratio: 1;
+      background: var(--color-purple-900);
+      top: 50%;
+      translate: 0 -42%;
+
+      &.top-calendar__month-arrow--next {
+        left: calc(100% + 1em);
+        clip-path: polygon(0 0, 100% 50%, 0 100%);
+      }
+
+      &.top-calendar__month-arrow--prev {
+        right: calc(100% + 1em);
+        clip-path: polygon(100% 0, 100% 100%, 0 50%);
+      }
+    }
   }
 
   .top-calendar__figure {

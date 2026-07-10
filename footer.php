@@ -194,13 +194,13 @@
             <a href="<?php echo home_url(); ?>/visit/">初めての方へ</a>
           </li>
           <li>
-            <a href="https://oshiro-skin-clinic.com/case/" target="_blank">症例写真</a>
+            <a href="<?php echo home_url(); ?>/access/">アクセス</a>
           </li>
           <li>
-            <a href="https://oshiro-skin-clinic.com/price/" target="_blank">美容施術 料金表</a>
+            <a href="https://oshiro-skin-clinic.com/genre/news/" target="_blank">お知らせ</a>
           </li>
           <li>
-            <a href="https://oshiro-skin-clinic.com/doctors-cosme/" target="_blank">ドクターズコスメ</a>
+            <a href="https://oshiro-skin-clinic.com/genre/blog/" target="_blank">ブログ</a>
           </li>
           <li>
             <a href="https://oshiro-skin-clinic.com/recruit/" target="_blank">求人情報</a>
@@ -209,10 +209,7 @@
             <a href="https://oshiro-skin-clinic.com/faq/" target="_blank"> よくある質問</a>
           </li>
           <li>
-            <a href="https://oshiro-skin-clinic.com/genre/news/" target="_blank">お知らせ一覧</a>
-          </li>
-          <li>
-            <a href="https://oshiro-skin-clinic.com/genre/blog/" target="_blank">ブログ一覧</a>
+            <a href="https://ssc.doctorqube.com/oshiro-skin-clinic/privacy.html" target="_blank"> プライバシーポリシー</a>
           </li>
         </ul>
       </div>

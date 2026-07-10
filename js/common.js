@@ -1308,6 +1308,47 @@ jQuery(function ($) {
 });
 
 /*==================================================
+CALENDAR SP 切り替え
+==================================================*/
+document.addEventListener("DOMContentLoaded", function () {
+  const calendar = document.querySelector(".top--calendar");
+  const activeClass = "is-active";
+
+  if (!calendar) return;
+
+  const month1Heading = calendar.querySelector("#calendarMonth1");
+  const month2Heading = calendar.querySelector("#calendarMonth2");
+
+  if (!month1Heading || !month2Heading) return;
+
+  const month1 = month1Heading.closest(".top-calendar__item");
+  const month2 = month2Heading.closest(".top-calendar__item");
+  const nextButton = calendar.querySelector(".top-calendar__month-arrow--next");
+  const prevButton = calendar.querySelector(".top-calendar__month-arrow--prev");
+
+  if (!month1 || !month2 || !nextButton || !prevButton) return;
+
+  let activeMonth = 1;
+
+  const updateCalendar = () => {
+    month1.classList.toggle(activeClass, activeMonth === 1);
+    month2.classList.toggle(activeClass, activeMonth === 2);
+  };
+
+  nextButton.addEventListener("click", function () {
+    activeMonth = 2;
+    updateCalendar();
+  });
+
+  prevButton.addEventListener("click", function () {
+    activeMonth = 1;
+    updateCalendar();
+  });
+
+  updateCalendar();
+});
+
+/*==================================================
 マップピン モーダル
 ==================================================*/
 jQuery(function ($) {
