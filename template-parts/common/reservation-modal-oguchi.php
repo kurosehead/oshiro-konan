@@ -1,9 +1,9 @@
 <div class="reservation-modal" data-reservation-clinic="oguchi">
   <div class="reservation-modal__inner">
     <button class="reservation-modal__close" type="button" aria-label="閉じる"></button>
+    <h2 class="reservation-modal__title">大口院のご予約</h2>
 
     <div class="reservation-modal__section reservation-modal__section--general">
-      <h2>大口モーダル</h2>
       <p class="reservation-modal__heading">保険診療予約</p>
 
       <div class="reservation-modal__buttons">

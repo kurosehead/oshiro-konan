@@ -905,8 +905,8 @@ $(function () {
 予約モーダルopen/close
 ==================================================*/
 jQuery(function ($) {
-  const getReservationModalTabIndex = function (clinic) {
-    return clinic === 'oguchi' ? 0 : 1;
+  const getReservationModalTabIndex = function () {
+    return 0;
   };
 
   $('.reservation-modal__open').on('click', function (e) {
@@ -981,7 +981,13 @@ jQuery(function ($) {
       }
     });
 
-    $modalInner.prepend($tabWrap);
+    const $title = $modalInner.find('.reservation-modal__title').first();
+
+    if ($title.length) {
+      $title.after($tabWrap);
+    } else {
+      $modalInner.prepend($tabWrap);
+    }
 
     $tabWrap.on('click', '.reservation-modal__tab', function () {
       if (window.innerWidth > 767) return;

@@ -1628,6 +1628,31 @@ header {
           &+.ham-contents__nav {
             margin-top: clamp(60px, 55.146px + 1.294vw, 80px);
           }
+
+
+          &.ham-contents__nav--clinic {
+            background: red;
+
+            .ham-contents__nav-item {
+              .ham-contents__nav-accordion {
+                a {
+                  background: linear-gradient(90deg, #f2edea 0%, #ede6e3 100%);
+                  align-items: center;
+
+                  img {
+                    display: block;
+                    aspect-ratio: 2/1;
+                    width: min(140px, 24vw);
+                  }
+                }
+              }
+            }
+
+
+            .ham-contents__nav-item {
+              width: 100%;
+            }
+          }
         }
       }
 
@@ -1641,18 +1666,10 @@ header {
           flex-direction: column;
           gap: clamp(15px, 13.786px + 0.324vw, 20px);
 
-          @media (max-width: 767px) {
-            flex-direction: row;
-          }
-
           .banner__item {
             width: 100%;
             border-radius: 4px;
             overflow: hidden;
-
-            @media (max-width: 767px) {
-              width: calc((100% - 15px) / 2);
-            }
 
             a {
               &:hover {
@@ -2142,24 +2159,36 @@ header {
 
 .information-table--area {
   .information-table {
-    background-color: var(--color-purple-50);
+    background-color: #f7f5f5;
     width: 100%;
     border-radius: 4px;
     overflow: hidden;
-    color: var(--color-purple-900);
+
+    .top--information & {
+      color: var(--color-purple-900);
+      background-color: var(--color-purple-50);
+    }
 
     tbody {
       tr {
         &+tr {
+          border-top: 1px #999 solid;
+        }
+
+        .top--information &+tr {
           border-top: 1px #d2c9da solid;
         }
 
         th {
-          border-right: 1px #d2c9da solid;
+          border-right: 1px #999 solid;
           font-weight: 400;
           padding: 15px;
           text-align: center;
           font-size: clamp(14px, 13.029px + 0.259vw, 18px);
+
+          .top--information & {
+            border-color: #d2c9da;
+          }
 
           @media (max-width: 767px) {
             padding: 15px 10px;
@@ -14672,7 +14701,7 @@ sidebar-leftを持つページ
     max-height: 780px;
     height: fit-content;
     margin: auto;
-    padding: 40px clamp(30px, 27.573px + 0.647vw, 40px);
+    padding: 40px min(30px, 8vw);
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.5);
     border: 1px solid #fff;
@@ -14721,23 +14750,38 @@ sidebar-leftを持つページ
     }
   }
 
-  .reservation-modal__heading {
-    margin: 0 0 18px;
-    padding: 10px 8px;
+  .reservation-modal__title {
     font-family: var(--font-min);
     font-weight: 500;
-    font-size: clamp(12px, 10.544px + 0.388vw, 18px);
-    line-height: 1.4;
-    color: #fff;
-    border-radius: 4px;
+    font-size: clamp(22px, 20.544px + 0.388vw, 28px);
+    line-height: 1;
+    text-align: center;
+    margin-bottom: min(25px, 6.67vw);
+
+    [data-reservation-clinic="konan"] & {
+      color: var(--color-purple-900);
+    }
   }
 
-  .reservation-modal__section--general .reservation-modal__heading {
-    background: linear-gradient(90deg, #D6822F 0%, #E1A972 100%);
-  }
+  &[data-reservation-clinic="oguchi"] {
+    .reservation-modal__heading {
+      margin: 0 0 18px;
+      padding: 10px 8px;
+      font-family: var(--font-min);
+      font-weight: 500;
+      font-size: clamp(12px, 10.544px + 0.388vw, 18px);
+      line-height: 1.4;
+      color: #fff;
+      border-radius: 4px;
+    }
 
-  .reservation-modal__section--beauty .reservation-modal__heading {
-    background: linear-gradient(90deg, #C62C2B 0%, #E48180 100%);
+    .reservation-modal__section--general .reservation-modal__heading {
+      background: linear-gradient(90deg, #D6822F 0%, #E1A972 100%);
+    }
+
+    .reservation-modal__section--beauty .reservation-modal__heading {
+      background: linear-gradient(90deg, #C62C2B 0%, #E48180 100%);
+    }
   }
 
   .reservation-modal__buttons {
@@ -14756,7 +14800,7 @@ sidebar-leftを持つページ
     align-items: center;
     gap: 5px;
     width: calc((100% - (clamp(10px, 7.573px + 0.647vw, 20px)) * 2) / 3);
-    padding: 10px 15px;
+    padding: 0.8em 15px;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.50);
     border: 1px solid #fff;
@@ -14844,12 +14888,20 @@ sidebar-leftを持つページ
 
   .reservation-modal__hours,
   .reservation-modal__holiday {
-    font-size: clamp(12px, 11.515px + 0.129vw, 14px);
+    font-size: min(14px, 3.73vw);
     line-height: 1.7;
   }
 
   .reservation-modal__holiday {
     margin-bottom: 10px;
+  }
+
+  .reservation-modal__hours {
+    &+& {
+      @media (max-width: 767px) {
+        margin-top: 0.5em;
+      }
+    }
   }
 
   .color-general {
@@ -14863,7 +14915,7 @@ sidebar-leftを持つページ
   .reservation-modal__note {
     position: relative;
     margin-top: 5px;
-    font-size: clamp(10px, 9.515px + 0.129vw, 12px);
+    font-size: min(12px, 3.2vw);
     line-height: 1.5;
     padding-left: 1em;
 
@@ -14871,7 +14923,7 @@ sidebar-leftを持つページ
       content: "※";
       position: absolute;
       left: 0;
-      font-size: clamp(10px, 9.515px + 0.129vw, 12px);
+      font-size: min(12px, 3.2vw);
     }
   }
 
@@ -14884,67 +14936,123 @@ sidebar-leftを持つページ
     display: none;
   }
 
+  &[data-reservation-clinic="konan"] {
+
+    .reservation-modal__heading {
+      font-family: var(--font-min);
+      font-weight: 500;
+      font-size: 27px;
+      line-height: 1.5;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 6px;
+      color: var(--color-purple-900);
+    }
+
+    .reservation-modal__button--web {
+      &::before {
+        background-image: url("../img/icon-web--konan.svg");
+      }
+    }
+
+    .reservation-modal__button--tel {
+      &::before {
+        background-image: url("../img/icon-tell--konan.svg");
+      }
+    }
+
+    .reservation-modal__button--web-beauty {
+      &::before {
+        background-image: url("../img/icon-web--konan.svg");
+      }
+    }
+
+  }
+
   @media (max-width: 767px) {
     .reservation-modal__tabs {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5px;
-      margin-bottom: 15px;
+      gap: min(5px, 1.33vw);
+      margin-bottom: min(28px, 7.47vw);
     }
 
     .reservation-modal__tab {
       font-family: var(--font-min);
       font-weight: 500;
-      font-size: 12px;
+      font-size: min(13px, 3.47vw);
       color: #fff;
       line-height: 1.2;
       width: 100%;
-      aspect-ratio: 135 / 40;
+      aspect-ratio: 135 / 55;
       border: none;
       border-radius: 4px;
-    }
 
-    .reservation-modal__tab:nth-child(1) {
-      background: #ECC49C;
-    }
+      &.is-active {
+        position: relative;
 
-    .reservation-modal__tab:nth-child(1).is-active {
-      background: linear-gradient(270deg, #E1A972 0%, #D6822F 100%);
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: url("data:image/svg+xml,%3Csvg width='42' height='8' viewBox='0 0 42 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.7852 7.5L0.000549972 -1.05417e-06L41.5698 2.57992e-06L20.7852 7.5Z' fill='url(%23paint0_linear_6811_9048)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_6811_9048' x1='-3.21484' y1='2.5' x2='44.7852' y2='2.5' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23DA9047'/%3E%3Cstop offset='1' stop-color='%23DD9B5A'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A") center top / contain no-repeat;
-        width: 45px;
-        height: 9px;
-        display: block;
+        &::after {
+          content: "";
+          position: absolute;
+          top: calc(100% - 1px);
+          left: 50%;
+          transform: translateX(-50%);
+          width: 45px;
+          height: 9px;
+          display: block;
+        }
       }
     }
 
-    .reservation-modal__tab:nth-child(2) {
-      background: #E19796;
-    }
+    &[data-reservation-clinic="oguchi"] {
+      .reservation-modal__tab:nth-child(1) {
+        background: #ECC49C;
+      }
 
-    .reservation-modal__tab:nth-child(2).is-active {
-      background: linear-gradient(90deg, #C62C2B 0%, #E48180 100%);
-      position: relative;
+      .reservation-modal__tab:nth-child(1).is-active {
+        background: linear-gradient(270deg, #E1A972 0%, #D6822F 100%);
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: url("data:image/svg+xml,%3Csvg width='42' height='8' viewBox='0 0 42 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.7852 7.5L0.000549972 -1.05417e-06L41.5698 2.57992e-06L20.7852 7.5Z' fill='url(%23paint0_linear_6812_9034)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_6812_9034' x1='-3.21484' y1='2.5' x2='44.7852' y2='2.5' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23D14C4B'/%3E%3Cstop offset='1' stop-color='%23D96160'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A") center top / contain no-repeat;
-        width: 45px;
-        height: 9px;
-        display: block;
+        &::after {
+          background: url("data:image/svg+xml,%3Csvg width='42' height='8' viewBox='0 0 42 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.7852 7.5L0.000549972 -1.05417e-06L41.5698 2.57992e-06L20.7852 7.5Z' fill='url(%23paint0_linear_6811_9048)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_6811_9048' x1='-3.21484' y1='2.5' x2='44.7852' y2='2.5' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23DA9047'/%3E%3Cstop offset='1' stop-color='%23DD9B5A'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A") center top / contain no-repeat;
+        }
+      }
+
+      .reservation-modal__tab:nth-child(2) {
+        background: #E19796;
+      }
+
+      .reservation-modal__tab:nth-child(2).is-active {
+        background: linear-gradient(90deg, #C62C2B 0%, #E48180 100%);
+
+        &::after {
+          background: url("data:image/svg+xml,%3Csvg width='42' height='8' viewBox='0 0 42 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.7852 7.5L0.000549972 -1.05417e-06L41.5698 2.57992e-06L20.7852 7.5Z' fill='url(%23paint0_linear_6812_9034)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_6812_9034' x1='-3.21484' y1='2.5' x2='44.7852' y2='2.5' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23D14C4B'/%3E%3Cstop offset='1' stop-color='%23D96160'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A") center top / contain no-repeat;
+        }
+
+        &[data-reservation-clinic="konan"] .reservation-modal__tab {
+          background: #fff;
+          color: var(--color-purple-900);
+        }
+
       }
     }
+
+    &[data-reservation-clinic="konan"] {
+
+      .reservation-modal__tab {
+        color: var(--color-purple-900);
+
+        &.is-active {
+          background-color: var(--color-purple-900);
+          color: #fff;
+
+          &::after {
+            background: inherit;
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+          }
+        }
+      }
+
+    }
+
 
     .reservation-modal__section.is-hidden-sp {
       display: none;

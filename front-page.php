@@ -131,7 +131,7 @@
           </tbody>
         </table>
         <p class="notes">【休診日】木・土・日</p>
-        <p class="notes">受付時間が過ぎても診察が続いている場合、ご予約されている患者さまに限り午前は12:00まで、午後は17:30まで</p>
+        <p class="notes">受付時間が過ぎても診察が続いている場合、ご予約されている患者さまに限り午前は12:15まで、午後は17:15まで</p>
       </div>
     </section>
   </div>
@@ -373,7 +373,7 @@
       <!-- features03 -->
       <div class="features__item">
         <div class="features__head">
-          <h3 class="features__ttl">病診連携・診診連携先の<br>江南厚生病院のすぐ隣</h3>
+          <h3 class="features__ttl">地域の基幹病院である<br>江南厚生病院まで徒歩1分のアクセス</h3>
           <div class="features__num">3</div>
         </div>
         <div class="features__img">

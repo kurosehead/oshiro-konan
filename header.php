@@ -72,58 +72,46 @@
           <!-- 当院について -->
           <li class="g-nav_item has-dropdown-small">
             <a href="<?php echo home_url(); ?>/about/">
-              <p class="label">当院について</p>
+              <p class="label">２つのクリニック</p>
+              <p class="sub_label">CLINIC</p>
+            </a>
+            <div class="dropdown-menu-small">
+              <div class="dropdown-menu-small__inner">
+                <ul class="dropdown-menu-small__list">
+                  <li class="dropdown-menu-small__item">
+                    <a href="https://oshiro-skin-clinic.com/" target="_blank">大口本院</a>
+                  </li>
+                  <li class="dropdown-menu-small__item">
+                    <a href="<?php echo home_url(); ?>">江南院</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <!-- 江南院について -->
+          <li class="g-nav_item has-dropdown-small">
+            <a href="<?php echo home_url(); ?>/visit/">
+              <p class="label">江南院について</p>
               <p class="sub_label">ABOUT</p>
             </a>
             <div class="dropdown-menu-small">
               <div class="dropdown-menu-small__inner">
                 <ul class="dropdown-menu-small__list">
                   <li class="dropdown-menu-small__item">
-                    <a href="<?php echo home_url(); ?>/about/#anchor-philosophy">理念</a>
+                    <a href="<?php echo home_url(); ?>/about/">江南院について</a>
                   </li>
                   <li class="dropdown-menu-small__item">
-                    <a href="<?php echo home_url(); ?>/about/#anchor-policy">当院の診療方針</a>
+                    <a href="<?php echo home_url(); ?>/visit/">初めての方へ</a>
                   </li>
                   <li class="dropdown-menu-small__item">
-                    <a href="<?php echo home_url(); ?>/about/#anchor-greeting">院長のご挨拶</a>
+                    <a href="<?php echo home_url(); ?>/access/">アクセス</a>
                   </li>
                   <li class="dropdown-menu-small__item">
-                    <a href="<?php echo home_url(); ?>/about/#anchor-doctor">医師紹介</a>
-                  </li>
-                  <li class="dropdown-menu-small__item">
-                    <a href="<?php echo home_url(); ?>/about/#anchor-facilities">施設紹介</a>
-                  </li>
-                  <li class="dropdown-menu-small__item">
-                    <a href="<?php echo home_url(); ?>/about/#anchor-equipment">機器紹介</a>
+                    <a href="https://oshiro-skin-clinic.com/blogcat/info-konan/" target="_blank">お知らせ</a>
                   </li>
                 </ul>
               </div>
             </div>
-          </li>
-          <!-- 初めての方へ -->
-          <li class="g-nav_item has-dropdown-small">
-            <a href="<?php echo home_url(); ?>/visit/">
-              <p class="label">初めての方へ</p>
-              <p class="sub_label">GUIDE</p>
-            </a>
-            <!-- <div class="dropdown-menu-small">
-                <div class="dropdown-menu-small__inner">
-                  <ul class="dropdown-menu-small__list">
-                    <li class="dropdown-menu-small__item">
-                      <a href="#">保険診療の流れ</a>
-                    </li>
-                    <li class="dropdown-menu-small__item">
-                      <a href="#">美容診療の流れ</a>
-                    </li>
-                    <li class="dropdown-menu-small__item">
-                      <a href="#">アクセス</a>
-                    </li>
-                    <li class="dropdown-menu-small__item">
-                      <a href="#">よくある質問</a>
-                    </li>
-                  </ul>
-                </div>
-              </div> -->
           </li>
           <!-- 一般皮膚科/小児皮膚科 -->
           <li class="g-nav_item has-dropdown-large">
@@ -476,17 +464,8 @@
             <div class="ham--banner sp">
               <ul class="banner__list">
                 <li class="banner__item">
-                  <a href="https://oshiro-skin-clinic.com/" target="_blank">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-oguchi.webp" alt="江南院バナー" class="pc">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-oguchi_sp.webp" alt="江南院バナー" class="sp">
-                  </a>
-                </li>
-                <li class="banner__item">
                   <a href="https://oshiro-skin-clinic.shop/" target="_blank">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-online-store.webp"
-                      alt="オンラインストアバナー" class="pc">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-online-store_sp.webp"
-                      alt="オンラインストアバナー" class="sp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-online-store.webp" alt="オンラインストアバナー">
                   </a>
                 </li>
               </ul>
@@ -510,44 +489,59 @@
                 </li>
               </ul>
             </div>
+
+            <!-- 大口院メニュー -->
+            <div class="ham-contents__nav ham-contents__nav--clinic">
+              <ul class="ham-contents__nav-list">
+                <li class="ham-contents__nav-item nav-item--general-child">
+                  <div class="ham-contents__nav-accordion">
+                    <a href="https://oshiro-skin-clinic.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/img_hum-section--oguchi.webp" alt="">大口本院トップ</a>
+                  </div>
+                  <div class="nav-accordion__area">
+                    <ul class="nav-accordion__list">
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/about/" target="_blank">大口本院について</a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/visit/" target="_blank">初めての方へ</a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/access/" target="_blank">アクセス</a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/genre/news/" target="_blank">お知らせ</a>
+                      </li>
+
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 両院共通 -->
             <div class="ham-contents__nav nav--other">
               <ul class="ham-contents__nav-list">
                 <li class="ham-contents__nav-item">
-                  <a href="<?php echo home_url(); ?>">ホーム</a>
+                  <a href="https://oshiro-skin-clinic.com/genre/blog/" target="_blank">ブログ</a>
                 </li>
                 <li class="ham-contents__nav-item">
-                  <a href="<?php echo home_url(); ?>/about/">当院について</a>
+                  <a href="https://oshiro-skin-clinic.com/recruit/" target="_blank">求人情報</a>
                 </li>
                 <li class="ham-contents__nav-item">
-                  <a href="<?php echo home_url(); ?>/visit/">初めての方へ</a>
+                  <a href="https://oshiro-skin-clinic.com/faq/" target="_blank">よくある質問</a>
                 </li>
                 <li class="ham-contents__nav-item">
-                  <a href="<?php echo home_url(); ?>/genre/news/">お知らせ</a>
+                  <a href="https://oshiro-skin-clinic.com/price/" target="_blank">美容料金表</a>
                 </li>
                 <li class="ham-contents__nav-item">
-                  <a href="<?php echo home_url(); ?>/genre/blog/">ブログ</a>
-                </li>
-                <li class="ham-contents__nav-item">
-                  <a href="<?php echo home_url(); ?>/recruit/">求人情報</a>
-                </li>
-                <li class="ham-contents__nav-item">
-                  <a href="<?php echo home_url(); ?>/faq/">よくある質問</a>
-                </li>
-                <li class="ham-contents__nav-item">
-                  <a href="<?php echo home_url(); ?>/access">アクセス</a>
-                </li>
-                <li class="ham-contents__nav-item">
-                  <a href="<?php echo home_url(); ?>/price/">美容料金表</a>
-                </li>
-                <li class="ham-contents__nav-item">
-                  <a href="<?php echo home_url(); ?>/case/">症例写真</a>
+                  <a href="https://oshiro-skin-clinic.com/case/" target="_blank">症例写真</a>
                 </li>
 
-                <li class="ham-contents__nav-item is-full-width">
-                  <a href="<?php echo home_url(); ?>/medical-cooperation/">病診連携について</a>
+                <li class="ham-contents__nav-item">
+                  <a href="https://oshiro-skin-clinic.com/medical-cooperation/" target="_blank">病診連携について</a>
                 </li>
                 <li class="ham-contents__nav-item is-full-width">
-                  <a href="<?php echo home_url(); ?>/inquiry-media/">メディア掲載/出演依頼のお問い合せ</a>
+                  <a href="https://oshiro-skin-clinic.com/inquiry-media/" target="_blank">メディア掲載/出演依頼のお問い合せ</a>
                 </li>
               </ul>
             </div>
@@ -745,15 +739,8 @@
             <div class="ham--banner pc">
               <ul class="banner__list">
                 <li class="banner__item">
-                  <a href="https://oshiro-skin-clinic.com/" target="_blank">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-oguchi.webp" alt="江南院バナー" class="pc">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-oguchi_sp.webp" alt="江南院バナー" class="sp">
-                  </a>
-                </li>
-                <li class="banner__item">
                   <a href="https://oshiro-skin-clinic.shop/" target="_blank">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-online-store.webp" alt="オンラインストアバナー" class="pc">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-online-store_sp.webp" alt="オンラインストアバナー" class="sp">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/banner-online-store.webp" alt="オンラインストアバナー">
                   </a>
                 </li>
               </ul>
