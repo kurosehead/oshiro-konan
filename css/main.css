@@ -1631,18 +1631,59 @@ header {
 
 
           &.ham-contents__nav--clinic {
-            background: red;
-
             .ham-contents__nav-item {
+              container-type: inline-size;
+
               .ham-contents__nav-accordion {
+                margin: 0;
+
                 a {
                   background: linear-gradient(90deg, #f2edea 0%, #ede6e3 100%);
                   align-items: center;
+                  border-bottom: unset;
+                  padding: 0 min(27px, 7.2vw) 0 0;
+                  gap: clamp(15px, 13.786px + 0.324vw, 20px);
+                  border-radius: 4px 4px 0 0;
+                  overflow: hidden;
 
                   img {
                     display: block;
                     aspect-ratio: 2/1;
-                    width: min(140px, 24vw);
+                    width: clamp(90px, 77.864px + 3.236vw, 140px);
+
+                    @media (max-width: 767px) {
+                      aspect-ratio: 3/2;
+                    }
+                  }
+
+                  &::after {
+                    position: relative;
+                    bottom: unset;
+                    right: 0;
+                    margin-left: auto;
+                  }
+
+                  &:hover::after {
+                    right: -5px;
+                  }
+                }
+              }
+
+              .nav-accordion__area {
+                border-radius: 0 0 4px 4px;
+
+                @media (max-width: 767px) {
+
+                  padding-inline: 5.37cqw;
+
+                  .nav-accordion__list {
+                    gap: min(20px, 5.97cqw) min(15px, 4.48cqw);
+                    flex-direction: row;
+
+                    .nav-accordion__item {
+                      width: 38.81cqw;
+                      flex: 1 1 auto;
+                    }
                   }
                 }
               }
@@ -1897,9 +1938,13 @@ header {
     .read {
       font-family: var(--font-min);
       font-weight: 500;
-      font-size: clamp(24px, 15.262px + 2.330vw, 60px);
+      font-size: clamp(21px, 11.534px + 2.524vw, 60px);
       line-height: 1.5;
       margin: 0;
+
+      @media (max-width: 767px) {
+        line-height: 1.714;
+      }
     }
 
     .txt {

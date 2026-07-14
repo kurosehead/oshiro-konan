@@ -495,7 +495,14 @@
               <ul class="ham-contents__nav-list">
                 <li class="ham-contents__nav-item nav-item--general-child">
                   <div class="ham-contents__nav-accordion">
-                    <a href="https://oshiro-skin-clinic.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/img_hum-section--oguchi.webp" alt="">大口本院トップ</a>
+                    <a href="https://oshiro-skin-clinic.com/" target="_blank">
+                      <picture>
+                        <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/img/img_hum-section--oguchi-sp.webp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/img_hum-section--oguchi.webp" alt="" loading="lazy">
+                      </picture>
+                      大口本院トップ
+                    </a>
+
                   </div>
                   <div class="nav-accordion__area">
                     <ul class="nav-accordion__list">
@@ -512,6 +519,40 @@
                         <a href="https://oshiro-skin-clinic.com/genre/news/" target="_blank">お知らせ</a>
                       </li>
 
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 江南院メニュー -->
+            <div class="ham-contents__nav ham-contents__nav--clinic">
+              <ul class="ham-contents__nav-list">
+                <li class="ham-contents__nav-item nav-item--general-child">
+                  <div class="ham-contents__nav-accordion">
+                    <a href="<?php echo home_url(); ?>">
+                      <picture>
+                        <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/img/img_hum-section--konan-sp.webp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/img_hum-section--konan.webp" alt="" loading="lazy">
+                      </picture>
+                      江南院トップ
+                    </a>
+
+                  </div>
+                  <div class="nav-accordion__area">
+                    <ul class="nav-accordion__list">
+                      <li class="nav-accordion__item">
+                        <a href="<?php echo esc_url(home_url('/about/')); ?>">江南院について</a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="<?php echo esc_url(home_url('/visit/')); ?>">初めての方へ</a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="<?php echo esc_url(home_url('/access/')); ?>">アクセス</a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/blogcat/info-konan/" target="_blank" rel="noopener noreferrer">お知らせ</a>
+                      </li>
                     </ul>
                   </div>
                 </li>
