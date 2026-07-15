@@ -593,21 +593,23 @@ list
   margin: 0;
   padding: 0;
 
-  &>li {
-    position: relative;
-    padding-right: 10px;
+  &:not(.dropdown-menu__main .list-arrow) {
+    >li {
+      position: relative;
+      padding-right: 10px;
 
-    &::after {
-      content: "";
-      width: 4px;
-      height: 8px;
-      background: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.53125 0.53125L4.53125 4.53125L0.53125 8.53125' stroke='%23766287' stroke-width='1.5'/%3E%3C/svg%3E") center center / contain no-repeat;
-      display: inline-block;
+      &::after {
+        content: "";
+        width: 4px;
+        height: 8px;
+        background: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.53125 0.53125L4.53125 4.53125L0.53125 8.53125' stroke='%23766287' stroke-width='1.5'/%3E%3C/svg%3E") center / contain no-repeat;
+        display: inline-block;
+      }
     }
+  }
 
-    &+li {
-      margin-top: 10px;
-    }
+  >li+li {
+    margin-top: 10px;
   }
 }
 
@@ -970,6 +972,14 @@ header {
 
                       a:hover {
                         opacity: 0.7;
+                      }
+
+                      a::before {
+                        content: "";
+                        width: 4px;
+                        height: 8px;
+                        background: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.53125 0.53125L4.53125 4.53125L0.53125 8.53125' stroke='%23766287' stroke-width='1.5'/%3E%3C/svg%3E") center / contain no-repeat;
+                        display: inline-block;
                       }
 
                       &+li {
@@ -2190,6 +2200,11 @@ header {
       display: flex;
       justify-content: flex-end;
     }
+
+    .news__empty {
+      font-size: clamp(14px, 13.029px + 0.259vw, 18px);
+      text-align: center;
+    }
   }
 
   /*--- INFORMATION ---*/
@@ -3269,6 +3284,10 @@ header {
         gap: 10px;
         align-items: baseline;
         margin-top: clamp(50px, 47.573px + 0.647vw, 60px);
+
+        @media (max-width: 767px) {
+          flex-direction: column;
+        }
 
         .position {
           font-family: var(--font-min);
@@ -15918,14 +15937,29 @@ sidebar-leftを持つページ
 
 /* --- 江南院での美容診療について --- */
 .beauty-note {
-  background: #fff;
+  background: #ffeded;
   width: min(1200px, 100%);
   margin-inline: auto;
   border-radius: 4px;
   padding: min(20px, 5.33vw);
+  margin-bottom: min(25px, 6.67vw);
+
+  .top--menu & {
+    background: #fff;
+    margin-bottom: 0;
+
+    @media (max-width: 767px) {
+      width: 90%;
+      margin-inline: auto;
+    }
+  }
+
+  .nav-list+& {
+    margin-top: 25px;
+  }
 
   .beauty-note__title {
-    text-align: center;
+    text-align: left;
     font-family: var(--font-min);
     font-weight: 600;
     line-height: 1;

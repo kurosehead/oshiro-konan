@@ -124,111 +124,136 @@
                 <div class="dropdown-menu__head">
                   <ul class="nav-list">
                     <li class="nav-item">
-                      <a href="<?php echo home_url(); ?>/general/">一般皮膚科</a>
+                      <a href="https://oshiro-skin-clinic.com/general/" target="_blank" rel="noopener noreferrer">一般皮膚科</a>
                     </li>
                     <li class="nav-item">
-                      <a href="<?php echo home_url(); ?>/child/">小児皮膚科</a>
+                      <a href="https://oshiro-skin-clinic.com/child/" target="_blank" rel="noopener noreferrer">小児皮膚科</a>
                     </li>
                   </ul>
                 </div>
                 <div class="dropdown-menu__main">
-
                   <div class="subject-block">
-                    <p class="subject-block__ttl">一般皮膚科の疾患</p>
-                    <?php
-                    $args = array(
-                      'post_type' => 'general',
-                      'posts_per_page' => -1,
-                      'post_status' => 'publish',
-                      'orderby' => 'menu_order',
-                      'order' => 'ASC',
-                      'tax_query' => array(
-                        array(
-                          'taxonomy' => 'clinical-departments',
-                          'field' => 'slug',
-                          'terms' => 'general',
-                        ),
-                      ),
-                    );
+                    <!-- <p class="subject-block__ttl">一般皮膚科/小児皮膚科の疾患</p> -->
 
-                    $menu_query = new WP_Query($args);
-                    ?>
-
-                    <?php if ($menu_query->have_posts()): ?>
-                      <ul class="list-arrow">
-                        <?php while ($menu_query->have_posts()):
-                          $menu_query->the_post();
-                          $noindex = false;
-                        ?>
-                          <li>
-                            <?php if ($noindex): ?>
-                              <span>
-                                <?php the_title(); ?>
-                              </span>
-                            <?php else: ?>
-                              <a href="<?php the_permalink(); ?>">
-                                <?php the_title(); ?>
-                              </a>
-                            <?php endif; ?>
-                          </li>
-                        <?php endwhile; ?>
-                      </ul>
-                    <?php endif; ?>
-
-                    <?php wp_reset_postdata(); ?>
-                  </div>
-
-                  <div class="subject-block">
-                    <p class="subject-block__ttl">小児皮膚科の疾患</p>
-                    <?php
-                    $args = array(
-                      'post_type' => 'general',
-                      'posts_per_page' => -1,
-                      'post_status' => 'publish',
-                      'orderby' => 'menu_order',
-                      'order' => 'ASC',
-                      'tax_query' => array(
-                        array(
-                          'taxonomy' => 'clinical-departments',
-                          'field' => 'slug',
-                          'terms' => 'child',
-                        ),
-                      ),
-                    );
-
-                    $menu_query = new WP_Query($args);
-                    ?>
-
-                    <?php if ($menu_query->have_posts()): ?>
-                      <ul class="list-arrow">
-                        <?php while ($menu_query->have_posts()):
-                          $menu_query->the_post();
-                          $noindex = false;
-                        ?>
-                          <li>
-                            <?php if ($noindex): ?>
-                              <span>
-                                <?php the_title(); ?>
-                              </span>
-                            <?php else: ?>
-                              <a href="<?php the_permalink(); ?>">
-                                <?php the_title(); ?>
-                              </a>
-                            <?php endif; ?>
-                          </li>
-                        <?php endwhile; ?>
-                      </ul>
-                    <?php endif; ?>
-
-                    <?php wp_reset_postdata(); ?>
+                    <ul class="list-arrow">
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/atipic-dermatitis/" target="_blank" rel="noopener noreferrer">
+                          アトピー性皮膚炎 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/seborrheic-dermatitis/" target="_blank" rel="noopener noreferrer">
+                          脂漏性皮膚炎（顔や頭のかゆみ） </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/dry-skin/" target="_blank" rel="noopener noreferrer">
+                          乾燥肌 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/hand-eczema/" target="_blank" rel="noopener noreferrer">
+                          手湿疹/手荒れ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/hives/" target="_blank" rel="noopener noreferrer">
+                          じんましん </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/ingrown-nail/" target="_blank" rel="noopener noreferrer">
+                          巻き爪/陥入爪 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/shingles/" target="_blank" rel="noopener noreferrer">
+                          帯状疱疹 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/athlete-foot/" target="_blank" rel="noopener noreferrer">
+                          水虫 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/acne-php/" target="_blank" rel="noopener noreferrer">
+                          にきび（尋常性ざ瘡） </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/vitiligo/" target="_blank" rel="noopener noreferrer">
+                          白斑 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/red-face/" target="_blank" rel="noopener noreferrer">
+                          赤ら顔（酒さ/毛細血管拡張症） </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/hair-loss/" target="_blank" rel="noopener noreferrer">
+                          円形脱毛症 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/corn-callus/" target="_blank" rel="noopener noreferrer">
+                          たこ/うおのめ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/epidermal-cyst/" target="_blank" rel="noopener noreferrer">
+                          粉瘤（アテローム） </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/sunburn/" target="_blank" rel="noopener noreferrer">
+                          日焼け </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/contact-dermatitis/" target="_blank" rel="noopener noreferrer">
+                          かぶれ（接触皮膚炎） </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/abrasion-cut/" target="_blank" rel="noopener noreferrer">
+                          切り傷/すり傷 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/food-allergy-rash/" target="_blank" rel="noopener noreferrer">
+                          食物アレルギー </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/palmoplantar-pustulosis/" target="_blank" rel="noopener noreferrer">
+                          掌蹠膿疱症 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/lipoma/" target="_blank" rel="noopener noreferrer">
+                          脂肪腫 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/infantile-hemangioma/" target="_blank" rel="noopener noreferrer">
+                          血管腫（乳児血管腫いちご状血管腫） </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/malassezia-folliculitis/" target="_blank" rel="noopener noreferrer">
+                          マラセチア毛包炎 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/nevus/" target="_blank" rel="noopener noreferrer">
+                          ほくろ（色素性母斑） </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/nail-fungus/" target="_blank" rel="noopener noreferrer">
+                          爪水虫 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/rosacea/" target="_blank" rel="noopener noreferrer">
+                          酒さ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/corns/" target="_blank" rel="noopener noreferrer">
+                          うおのめ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/herpes/" target="_blank" rel="noopener noreferrer">
+                          単純ヘルペス </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
             </div>
           </li>
+          <!-- // 一般皮膚科/小児皮膚科 -->
           <!-- 皮膚外科/成形外科 -->
           <li class="g-nav_item has-dropdown-large">
-            <a href="<?php echo home_url(); ?>/surgery/">
+            <a href="https://oshiro-skin-clinic.com/surgery/" target="_blank" rel="noopener noreferrer">
               <p class="label">皮膚外科/形成外科</p>
               <p class="sub_label">SURGERY</p>
             </a>
@@ -237,62 +262,67 @@
                 <div class="dropdown-menu__head">
                   <ul class="nav-list">
                     <li class="nav-item">
-                      <a href="<?php echo home_url(); ?>/surgery/">皮膚外科/形成外科</a>
+                      <a href="https://oshiro-skin-clinic.com/surgery/" target="_blank" rel="noopener noreferrer">皮膚外科/形成外科</a>
                     </li>
                   </ul>
                 </div>
                 <div class="dropdown-menu__main">
                   <div class="subject-block">
-                    <p class="subject-block__ttl">皮膚外科/形成外科の疾患</p>
-                    <?php
-                    $args = array(
-                      'post_type' => 'general',
-                      'posts_per_page' => -1,
-                      'post_status' => 'publish',
-                      'orderby' => 'menu_order',
-                      'order' => 'ASC',
-                      'tax_query' => array(
-                        array(
-                          'taxonomy' => 'clinical-departments',
-                          'field' => 'slug',
-                          'terms' => 'surgery',
-                        ),
-                      ),
-                    );
+                    <!-- <p class="subject-block__ttl">皮膚外科/形成外科の疾患</p> -->
 
-                    $menu_query = new WP_Query($args);
-                    ?>
+                    <ul class="list-arrow">
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/seborrheic-keratosis/" target="_blank" rel="noopener noreferrer">
+                          老人性いぼ（脂漏性角化症） </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/scar-keloid/" target="_blank" rel="noopener noreferrer">
+                          瘢痕・ケロイド </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/ingrown-nail/" target="_blank" rel="noopener noreferrer">
+                          巻き爪・陥入爪 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/burn/" target="_blank" rel="noopener noreferrer">
+                          やけど </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/epidermal-cyst/" target="_blank" rel="noopener noreferrer">
+                          粉瘤（アテローム） </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/abrasion-cut/" target="_blank" rel="noopener noreferrer">
+                          すり傷・切り傷 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/infantile-hemangioma/" target="_blank" rel="noopener noreferrer">
+                          赤あざ（いちご状血管腫・単純性血管腫） </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/nevus/" target="_blank" rel="noopener noreferrer">
+                          ほくろ（母斑） </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/blue-nevus/" target="_blank" rel="noopener noreferrer">
+                          青あざ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/general/nevus-spilus/" target="_blank" rel="noopener noreferrer">
+                          茶あざ </a>
+                      </li>
+                    </ul>
 
-                    <?php if ($menu_query->have_posts()): ?>
-                      <ul class="list-arrow">
-                        <?php while ($menu_query->have_posts()):
-                          $menu_query->the_post();
-                          $noindex = false;
-                        ?>
-                          <li>
-                            <?php if ($noindex): ?>
-                              <span>
-                                <?php the_title(); ?>
-                              </span>
-                            <?php else: ?>
-                              <a href="<?php the_permalink(); ?>">
-                                <?php the_title(); ?>
-                              </a>
-                            <?php endif; ?>
-                          </li>
-                        <?php endwhile; ?>
-                      </ul>
-                    <?php endif; ?>
-
-                    <?php wp_reset_postdata(); ?>
                   </div>
                 </div>
               </div>
             </div>
           </li>
+          <!-- // 皮膚外科/成形外科 -->
+
           <!-- 美容皮膚科 -->
           <li class="g-nav_item has-dropdown-large">
-            <a href="<?php echo home_url(); ?>/beauty/">
+            <a href="https://oshiro-skin-clinic.com/beauty/" target="_blank" rel="noopener noreferrer">
               <p class="label">美容皮膚科</p>
               <p class="sub_label">AESTHETICS</p>
             </a>
@@ -301,88 +331,205 @@
                 <div class="dropdown-menu__head">
                   <ul class="nav-list">
                     <li class="nav-item">
-                      <a href="<?php echo home_url(); ?>/beauty/">美容皮膚科</a>
+                      <a href="https://oshiro-skin-clinic.com/beauty/" target="_blank" rel="noopener noreferrer">美容皮膚科</a>
                     </li>
                     <li class="nav-item">
-                      <a href="<?php echo home_url(); ?>/case/">症例写真</a>
+                      <a href="https://oshiro-skin-clinic.com/case/" target="_blank" rel="noopener noreferrer">症例写真</a>
                     </li>
                     <li class="nav-item">
-                      <a href="<?php echo home_url(); ?>/price/">料金表</a>
+                      <a href="https://oshiro-skin-clinic.com/price/" target="_blank" rel="noopener noreferrer">料金表</a>
                     </li>
                   </ul>
+                  <?php get_template_part('template-parts/common/beauty-note-konan'); ?>
                 </div>
+
                 <div class="dropdown-menu__main">
                   <div class="subject-block">
                     <p class="subject-block__ttl">お悩み一覧</p>
-                    <?php
-                    $menu_query = new WP_Query(array(
-                      'post_type' => 'worries',
-                      'posts_per_page' => -1,
-                      'post_status' => 'publish',
-                      'orderby' => 'menu_order',
-                      'order' => 'ASC',
-                    ));
-                    ?>
 
-                    <?php if ($menu_query->have_posts()): ?>
-                      <ul class="list-arrow">
-                        <?php while ($menu_query->have_posts()):
-                          $menu_query->the_post();
-                          $noindex = false;
-                        ?>
-                          <li>
-                            <?php if ($noindex): ?>
-                              <span>
-                                <?php the_title(); ?>
-                              </span>
-                            <?php else: ?>
-                              <a href="<?php the_permalink(); ?>">
-                                <?php the_title(); ?>
-                              </a>
-                            <?php endif; ?>
-                          </li>
-                        <?php endwhile; ?>
-                      </ul>
-                    <?php endif; ?>
+                    <ul class="list-arrow">
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/medical-diet/" target="_blank" rel="noopener noreferrer">
+                          メディカルダイエット </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/body-odor-hyperhidrosis/" target="_blank" rel="noopener noreferrer">
+                          ワキガ・多汗症 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/removal/" target="_blank" rel="noopener noreferrer">
+                          医療脱毛 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/hyperpigmentation/" target="_blank" rel="noopener noreferrer">
+                          炎症後色素沈着・くすみ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/rosacea/" target="_blank" rel="noopener noreferrer">
+                          赤ら顔・酒さ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/skin-rejuvenation/" target="_blank" rel="noopener noreferrer">
+                          肌育・肌質改善 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/bruise/" target="_blank" rel="noopener noreferrer">
+                          あざ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/pores/" target="_blank" rel="noopener noreferrer">
+                          毛穴の開き・黒ずみ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/aga/" target="_blank" rel="noopener noreferrer">
+                          AGA・女性の薄毛 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/texture/" target="_blank" rel="noopener noreferrer">
+                          きめ・ハリ・ツヤ不足 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/stain/" target="_blank" rel="noopener noreferrer">
+                          シミ・肝斑・そばかす </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/wrinkles/" target="_blank" rel="noopener noreferrer">
+                          しわ・たるみ・小顔 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/tattoo/" target="_blank" rel="noopener noreferrer">
+                          タトゥー・アートメイク除去 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/acne/" target="_blank" rel="noopener noreferrer">
+                          ニキビ・ニキビ痕 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/earrings/" target="_blank" rel="noopener noreferrer">
+                          ピアス </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/worries/moles-warts/" target="_blank" rel="noopener noreferrer">
+                          ほくろ・いぼ </a>
+                      </li>
+                    </ul>
 
-                    <?php wp_reset_postdata(); ?>
                   </div>
 
                   <div class="subject-block">
                     <p class="subject-block__ttl">美容皮膚科の治療</p>
 
-                    <?php
-                    $menu_query = new WP_Query(array(
-                      'post_type' => 'beauty',
-                      'posts_per_page' => -1,
-                      'post_status' => 'publish',
-                      'orderby' => 'menu_order',
-                      'order' => 'ASC',
-                    ));
-                    ?>
+                    <ul class="list-arrow">
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/hyaluron/" target="_blank" rel="noopener noreferrer">
+                          ヒアルロン酸注射 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/botox/" target="_blank" rel="noopener noreferrer">
+                          ボトックス注射 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/sunekos/" target="_blank" rel="noopener noreferrer">
+                          スネコス注射 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/pluryal/" target="_blank" rel="noopener noreferrer">
+                          プルリアルデンシファイ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/art-make/" target="_blank" rel="noopener noreferrer">
+                          アートメイク </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/peeling/" target="_blank" rel="noopener noreferrer">
+                          ピーリング </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/isotretinoin/" target="_blank" rel="noopener noreferrer">
+                          イソトレチノイン </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/kabeline/" target="_blank" rel="noopener noreferrer">
+                          カベリン </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/spectra-2/" target="_blank" rel="noopener noreferrer">
+                          ハリウッドスペクトラ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/mosaic-3d/" target="_blank" rel="noopener noreferrer">
+                          モザイク3D </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/trifill-pro/" target="_blank" rel="noopener noreferrer">
+                          トライフィルプロ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/xerf-rf/" target="_blank" rel="noopener noreferrer">
+                          XERF ザーフ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/vbeam-2/" target="_blank" rel="noopener noreferrer">
+                          VビームⅡ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/ultracel-zi/" target="_blank" rel="noopener noreferrer">
+                          ウルトラセルZi </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/co2-fractional/" target="_blank" rel="noopener noreferrer">
+                          CO2 RE </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/3d-camera/" target="_blank" rel="noopener noreferrer">
+                          3Dカメラ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/ib103q/" target="_blank" rel="noopener noreferrer">
+                          Qスイッチルビーレーザー </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/eco2/" target="_blank" rel="noopener noreferrer">
+                          エコツーエボリューション </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/lasemd/" target="_blank" rel="noopener noreferrer">
+                          ラセムド </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/infini/" target="_blank" rel="noopener noreferrer">
+                          インフィニハイブリッド </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/potenza/" target="_blank" rel="noopener noreferrer">
+                          ポテンツァ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/dermapen/" target="_blank" rel="noopener noreferrer">
+                          ダーマペン4 </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/hydra-shower/" target="_blank" rel="noopener noreferrer">
+                          ハイドラシャワー </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/soprano/" target="_blank" rel="noopener noreferrer">
+                          ソプラノチタニウム </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/clarity/" target="_blank" rel="noopener noreferrer">
+                          クラリティツイン </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/healite/" target="_blank" rel="noopener noreferrer">
+                          ヒーライトⅡ </a>
+                      </li>
+                      <li>
+                        <a href="https://oshiro-skin-clinic.com/beauty/rebeau/" target="_blank" rel="noopener noreferrer">
+                          レビュー2 </a>
+                      </li>
+                    </ul>
 
-                    <?php if ($menu_query->have_posts()): ?>
-                      <ul class="list-arrow">
-                        <?php while ($menu_query->have_posts()):
-                          $menu_query->the_post();
-                          $noindex = false;
-                        ?>
-                          <li>
-                            <?php if ($noindex): ?>
-                              <span>
-                                <?php the_title(); ?>
-                              </span>
-                            <?php else: ?>
-                              <a href="<?php the_permalink(); ?>">
-                                <?php the_title(); ?>
-                              </a>
-                            <?php endif; ?>
-                          </li>
-                        <?php endwhile; ?>
-                      </ul>
-                    <?php endif; ?>
-
-                    <?php wp_reset_postdata(); ?>
                   </div>
                 </div>
               </div>
@@ -390,7 +537,7 @@
           </li>
           <!-- 美容皮膚科 -->
           <li class="g-nav_item has-dropdown-small">
-            <a href="<?php echo home_url(); ?>/doctors-cosme/">
+            <a href="https://oshiro-skin-clinic.com/doctors-cosme/" target="_blank">
               <p class="label">ドクターズコスメ</p>
               <p class="sub_label">COSME</p>
             </a>
@@ -402,7 +549,7 @@
                       target="_blank">オンラインショップ</a>
                   </li>
                   <li class="dropdown-menu-small__item">
-                    <a href="<?php echo home_url(); ?>/doctors-cosme/">取り扱い製品一覧</a>
+                    <a href="https://oshiro-skin-clinic.com/doctors-cosme/" target="_blank">取り扱い製品一覧</a>
                   </li>
                   <li class="dropdown-menu-small__item">
                     <a href="https://oshiro-skin-clinic.shop/chrono-verso.html?utm_source=official_site&utm_medium=referral&utm_campaign=cosme_product_page&utm_content=&chrono-verso"
@@ -614,21 +761,21 @@
               <p class="ham-contents__nav-ttl">一般皮膚科</p>
               <ul class="ham-contents__nav-list">
                 <li class="ham-contents__nav-item nav-item--general-child">
-                  <div class="ham-contents__nav-accordion"><a href="<?php echo home_url(); ?>/general/">一般皮膚科トップ</a>
+                  <div class="ham-contents__nav-accordion"><a href="https://oshiro-skin-clinic.com/general/" target="_blank" rel="noopener noreferrer">一般皮膚科トップ</a>
                   </div>
                   <div class="nav-accordion__area">
                     <ul class="nav-accordion__list">
                       <li class="nav-accordion__item">
-                        <a href="<?php echo home_url(); ?>/general/atipic-dermatitis/">アトピー性皮膚炎</a>
+                        <a href="https://oshiro-skin-clinic.com/general/atipic-dermatitis/" target="_blank" rel="noopener noreferrer">アトピー性皮膚炎</a>
                       </li>
                       <li class="nav-accordion__item">
-                        <a href="<?php echo home_url(); ?>/general/acne-php/">にきび（尋常性ざ瘡）</a>
+                        <a href="https://oshiro-skin-clinic.com/general/acne-php/" target="_blank" rel="noopener noreferrer">にきび（尋常性ざ瘡）</a>
                       </li>
                       <li class="nav-accordion__item">
-                        <a href="<?php echo home_url(); ?>/general/warts/">いぼ（尋常性疣贅）</a>
+                        <a href="https://oshiro-skin-clinic.com/general/warts/" target="_blank" rel="noopener noreferrer">いぼ（尋常性疣贅）</a>
                       </li>
                       <li class="nav-accordion__item">
-                        <a href="<?php echo home_url(); ?>/general/#anchor-menu">その他の疾患</a>
+                        <a href="https://oshiro-skin-clinic.com/general/#anchor-menu" target="_blank" rel="noopener noreferrer">その他の疾患</a>
                       </li>
                     </ul>
                   </div>
@@ -641,21 +788,21 @@
               <p class="ham-contents__nav-ttl">小児科皮膚科</p>
               <ul class="ham-contents__nav-list">
                 <li class="ham-contents__nav-item nav-item--general-child">
-                  <div class="ham-contents__nav-accordion"><a href="<?php echo home_url(); ?>/child/">小児科皮膚科トップ</a>
+                  <div class="ham-contents__nav-accordion"><a href="https://oshiro-skin-clinic.com/child/" target="_blank" rel="noopener noreferrer">小児科皮膚科トップ</a>
                   </div>
                   <div class="nav-accordion__area">
                     <ul class="nav-accordion__list">
                       <!-- <li class="nav-accordion__item">
-                        <a href="<?php echo home_url(); ?>/general/">乳児湿疹</a>
-                      </li> -->
+            <a href="https://oshiro-skin-clinic.com/general/" target="_blank" rel="noopener noreferrer">乳児湿疹</a>
+          </li> -->
                       <li class="nav-accordion__item">
-                        <a href="<?php echo home_url(); ?>/general/warts/">いぼ</a>
+                        <a href="https://oshiro-skin-clinic.com/general/warts/" target="_blank" rel="noopener noreferrer">いぼ</a>
                       </li>
                       <li class="nav-accordion__item">
-                        <a href="<?php echo home_url(); ?>/general/hives/">じんましん</a>
+                        <a href="https://oshiro-skin-clinic.com/general/hives/" target="_blank" rel="noopener noreferrer">じんましん</a>
                       </li>
                       <li class="nav-accordion__item">
-                        <a href="<?php echo home_url(); ?>/child/#anchor-menu">その他の疾患</a>
+                        <a href="https://oshiro-skin-clinic.com/child/#anchor-menu" target="_blank" rel="noopener noreferrer">その他の疾患</a>
                       </li>
                     </ul>
                   </div>
@@ -668,21 +815,21 @@
               <p class="ham-contents__nav-ttl">皮膚外科 / 形成外科</p>
               <ul class="ham-contents__nav-list">
                 <li class="ham-contents__nav-item nav-item--general-child">
-                  <div class="ham-contents__nav-accordion"><a href="<?php echo home_url(); ?>/surgery/">皮膚外科 /
+                  <div class="ham-contents__nav-accordion"><a href="https://oshiro-skin-clinic.com/surgery/" target="_blank" rel="noopener noreferrer">皮膚外科 /
                       形成外科トップ</a></div>
                   <div class="nav-accordion__area">
                     <ul class="nav-accordion__list">
                       <li class="nav-accordion__item">
-                        <a href="<?php echo home_url(); ?>/general/epidermal-cyst/">粉瘤（アテローム）</a>
+                        <a href="https://oshiro-skin-clinic.com/general/epidermal-cyst/" target="_blank" rel="noopener noreferrer">粉瘤（アテローム）</a>
                       </li>
                       <li class="nav-accordion__item">
-                        <a href="<?php echo home_url(); ?>/general/ingrown-nail/">巻き爪/陥入爪</a>
+                        <a href="https://oshiro-skin-clinic.com/general/ingrown-nail/" target="_blank" rel="noopener noreferrer">巻き爪/陥入爪</a>
                       </li>
                       <li class="nav-accordion__item">
-                        <a href="<?php echo home_url(); ?>/general/nevus/">ほくろ（色素性母斑）</a>
+                        <a href="https://oshiro-skin-clinic.com/general/nevus/" target="_blank" rel="noopener noreferrer">ほくろ（色素性母斑）</a>
                       </li>
                       <li class="nav-accordion__item">
-                        <a href="<?php echo home_url(); ?>/surgery/#anchor-menu">その他の疾患</a>
+                        <a href="https://oshiro-skin-clinic.com/surgery/#anchor-menu" target="_blank" rel="noopener noreferrer">その他の疾患</a>
                       </li>
                     </ul>
                   </div>
@@ -693,82 +840,201 @@
             <!-- 美容診療 -->
             <div class="ham-contents__nav nav--beauty">
               <p class="ham-contents__nav-ttl">美容診療</p>
+              <?php get_template_part('template-parts/common/beauty-note-konan'); ?>
               <ul class="ham-contents__nav-list">
                 <li class="ham-contents__nav-item">
-                  <a href="<?php echo home_url(); ?>/beauty/">美容診療トップ</a>
+                  <a href="https://oshiro-skin-clinic.com/beauty/" target="_blank" rel="noopener noreferrer">美容診療トップ</a>
                 </li>
                 <li class="ham-contents__nav-item">
-                  <a href="<?php echo home_url(); ?>/price/">料金表</a>
+                  <a href="https://oshiro-skin-clinic.com/price/" target="_blank" rel="noopener noreferrer">料金表</a>
                 </li>
                 <li class="ham-contents__nav-item">
-                  <a href="<?php echo home_url(); ?>/case/">症例一覧</a>
+                  <a href="https://oshiro-skin-clinic.com/case/" target="_blank" rel="noopener noreferrer">症例一覧</a>
                 </li>
                 <li class="ham-contents__nav-item">
                   <p class="ham-contents__nav-accordion">お悩み一覧</p>
                   <div class="nav-accordion__area">
-                    <?php
-                    $menu_query = new WP_Query(array(
-                      'post_type' => 'worries',
-                      'posts_per_page' => -1,
-                      'post_status' => 'publish',
-                      'orderby' => 'menu_order',
-                      'order' => 'ASC',
-                    ));
-                    ?>
-                    <?php if ($menu_query->have_posts()): ?>
-                      <ul class="nav-accordion__list">
-                        <?php while ($menu_query->have_posts()):
-                          $menu_query->the_post();
-                          $noindex = false; ?>
-                          <li class="nav-accordion__item">
-                            <?php if ($noindex): ?>
-                              <span>
-                                <?php the_title(); ?>
-                              </span>
-                            <?php else: ?>
-                              <a href="<?php the_permalink(); ?>">
-                                <?php the_title(); ?>
-                              </a>
-                            <?php endif; ?>
-                          </li>
-                        <?php endwhile; ?>
-                      </ul>
-                    <?php endif; ?>
-                    <?php wp_reset_postdata(); ?>
+                    <ul class="nav-accordion__list">
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/medical-diet/" target="_blank" rel="noopener noreferrer">
+                          メディカルダイエット </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/body-odor-hyperhidrosis/" target="_blank" rel="noopener noreferrer">
+                          ワキガ・多汗症 </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/removal/" target="_blank" rel="noopener noreferrer">
+                          医療脱毛 </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/hyperpigmentation/" target="_blank" rel="noopener noreferrer">
+                          炎症後色素沈着・くすみ </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/rosacea/" target="_blank" rel="noopener noreferrer">
+                          赤ら顔・酒さ </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/skin-rejuvenation/" target="_blank" rel="noopener noreferrer">
+                          肌育・肌質改善 </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/bruise/" target="_blank" rel="noopener noreferrer">
+                          あざ </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/pores/" target="_blank" rel="noopener noreferrer">
+                          毛穴の開き・黒ずみ </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/aga/" target="_blank" rel="noopener noreferrer">
+                          AGA・女性の薄毛 </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/texture/" target="_blank" rel="noopener noreferrer">
+                          きめ・ハリ・ツヤ不足 </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/stain/" target="_blank" rel="noopener noreferrer">
+                          シミ・肝斑・そばかす </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/wrinkles/" target="_blank" rel="noopener noreferrer">
+                          しわ・たるみ・小顔 </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/tattoo/" target="_blank" rel="noopener noreferrer">
+                          タトゥー・アートメイク除去 </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/acne/" target="_blank" rel="noopener noreferrer">
+                          ニキビ・ニキビ痕 </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/earrings/" target="_blank" rel="noopener noreferrer">
+                          ピアス </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/worries/moles-warts/" target="_blank" rel="noopener noreferrer">
+                          ほくろ・いぼ </a>
+                      </li>
+                    </ul>
                   </div>
                 </li>
                 <li class="ham-contents__nav-item">
                   <p class="ham-contents__nav-accordion">治療メニュー一覧</p>
                   <div class="nav-accordion__area">
-                    <?php
-                    $menu_query = new WP_Query(array(
-                      'post_type' => 'beauty',
-                      'posts_per_page' => -1,
-                      'post_status' => 'publish',
-                      'orderby' => 'menu_order',
-                      'order' => 'ASC',
-                    ));
-                    ?>
-                    <?php if ($menu_query->have_posts()): ?>
-                      <ul class="nav-accordion__list">
-                        <?php while ($menu_query->have_posts()):
-                          $menu_query->the_post();
-                          $noindex = false; ?>
-                          <li class="nav-accordion__item">
-                            <?php if ($noindex): ?>
-                              <span>
-                                <?php the_title(); ?>
-                              </span>
-                            <?php else: ?>
-                              <a href="<?php the_permalink(); ?>">
-                                <?php the_title(); ?>
-                              </a>
-                            <?php endif; ?>
-                          </li>
-                        <?php endwhile; ?>
-                      </ul>
-                    <?php endif; ?>
-                    <?php wp_reset_postdata(); ?>
+                    <ul class="nav-accordion__list">
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/hyaluron/" target="_blank" rel="noopener noreferrer">
+                          ヒアルロン酸注射 </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/botox/" target="_blank" rel="noopener noreferrer">
+                          ボトックス注射 </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/sunekos/" target="_blank" rel="noopener noreferrer">
+                          スネコス注射 </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/pluryal/" target="_blank" rel="noopener noreferrer">
+                          プルリアルデンシファイ </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/art-make/" target="_blank" rel="noopener noreferrer">
+                          アートメイク </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/peeling/" target="_blank" rel="noopener noreferrer">
+                          ピーリング </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/isotretinoin/" target="_blank" rel="noopener noreferrer">
+                          イソトレチノイン </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/kabeline/" target="_blank" rel="noopener noreferrer">
+                          カベリン </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/spectra-2/" target="_blank" rel="noopener noreferrer">
+                          ハリウッドスペクトラ </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/mosaic-3d/" target="_blank" rel="noopener noreferrer">
+                          モザイク3D </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/trifill-pro/" target="_blank" rel="noopener noreferrer">
+                          トライフィルプロ </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/xerf-rf/" target="_blank" rel="noopener noreferrer">
+                          XERF ザーフ </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/vbeam-2/" target="_blank" rel="noopener noreferrer">
+                          VビームⅡ </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/ultracel-zi/" target="_blank" rel="noopener noreferrer">
+                          ウルトラセルZi </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/co2-fractional/" target="_blank" rel="noopener noreferrer">
+                          CO2 RE </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/3d-camera/" target="_blank" rel="noopener noreferrer">
+                          3Dカメラ </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/ib103q/" target="_blank" rel="noopener noreferrer">
+                          Qスイッチルビーレーザー </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/eco2/" target="_blank" rel="noopener noreferrer">
+                          エコツーエボリューション </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/lasemd/" target="_blank" rel="noopener noreferrer">
+                          ラセムド </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/infini/" target="_blank" rel="noopener noreferrer">
+                          インフィニハイブリッド </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/potenza/" target="_blank" rel="noopener noreferrer">
+                          ポテンツァ </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/dermapen/" target="_blank" rel="noopener noreferrer">
+                          ダーマペン4 </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/hydra-shower/" target="_blank" rel="noopener noreferrer">
+                          ハイドラシャワー </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/soprano/" target="_blank" rel="noopener noreferrer">
+                          ソプラノチタニウム </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/clarity/" target="_blank" rel="noopener noreferrer">
+                          クラリティツイン </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/healite/" target="_blank" rel="noopener noreferrer">
+                          ヒーライトⅡ </a>
+                      </li>
+                      <li class="nav-accordion__item">
+                        <a href="https://oshiro-skin-clinic.com/beauty/rebeau/" target="_blank" rel="noopener noreferrer">
+                          レビュー2 </a>
+                      </li>
+                    </ul>
                   </div>
                 </li>
               </ul>

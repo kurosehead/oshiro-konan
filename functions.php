@@ -109,12 +109,12 @@ add_action('init', function () {
     'index.php?blogcat=$matches[1]&paged=$matches[2]',
     'top'
   );
-
 }, 11);
 
 
 /* ---------- アーカイブページのタームに応じたデフォルトアイキャッチ画像を返す ---------- */
-function my_get_default_eyecatch_url($post_id = null) {
+function my_get_default_eyecatch_url($post_id = null)
+{
   $post_id = $post_id ?: get_the_ID();
 
   // 最終 fallback
@@ -261,9 +261,9 @@ add_action('wp_enqueue_scripts', 'my_enqueue_ajaxzip3');
 
 function my_cf7_zip_autofill_script()
 {
-  ?>
+?>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
       const zip1 = document.querySelector('input[name="your-zip1"]');
       const zip2 = document.querySelector('input[name="your-zip2"]');
 
@@ -284,7 +284,7 @@ function my_cf7_zip_autofill_script()
       zip2.addEventListener('blur', runAutoFill);
     });
   </script>
-  <?php
+<?php
 }
 add_action('wp_footer', 'my_cf7_zip_autofill_script', 30);
 
@@ -405,7 +405,8 @@ add_filter('block_editor_settings_all', function ($editor_settings, $editor_cont
 }, 10, 2);
 
 /* ---------- 見出しブロックの設定を制御 ---------- */
-function my_customize_heading_block_settings($args, $block_type) {
+function my_customize_heading_block_settings($args, $block_type)
+{
   if ($block_type !== 'core/heading') {
     return $args;
   }
@@ -470,7 +471,6 @@ function custom_tmce_settings($initArray)
     ];
 
     $initArray['style_formats'] = wp_json_encode($style_formats);
-
   } else {
     $initArray['block_formats'] = "見出し2=h2; 見出し3=h3; 見出し4=h4; 見出し5=h5; 段落=p;";
   }
@@ -626,7 +626,6 @@ function get_page_meta_info()
 
   if (is_page()) {
     $page_title_ja = get_the_title();
-
   } elseif (is_tax()) {
     $term = get_queried_object();
     if ($term) {
@@ -640,7 +639,6 @@ function get_page_meta_info()
         }
       }
     }
-
   } elseif (is_post_type_archive()) {
     $post_type = get_query_var('post_type');
     if (is_array($post_type)) {
@@ -679,7 +677,6 @@ function get_page_meta_info()
         }
         break;
     }
-
   } elseif (is_singular()) {
     $post_type = get_post_type();
     if ($post_type && in_array($post_type, ['recommend', 'column', 'news', 'case'])) {
@@ -693,10 +690,8 @@ function get_page_meta_info()
         $page_title_ja = get_the_title();
       }
     }
-
   } elseif (is_404()) {
     $page_title_ja = 'ページが見つかりません';
-
   } elseif (!is_front_page()) {
     $page_title_ja = get_the_title();
   }
@@ -715,7 +710,7 @@ function get_page_meta_info()
 /* ---------- パンくずリスト ---------- */
 function breadcrumb()
 {
-  ?>
+?>
   <nav class="breadcrumb">
     <ol class="breadcrumb_list" itemscope itemtype="https://schema.org/BreadcrumbList">
       <li class="breadcrumb_item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -736,14 +731,14 @@ function breadcrumb()
         // 親ページがあれば順番に出力
         if (!empty($parents)):
           foreach ($parents as $parent_id):
-            ?>
+        ?>
             <li class="breadcrumb_item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
               <a itemprop="item" href="<?php echo esc_url(get_permalink($parent_id)); ?>">
                 <span itemprop="name"><?php echo esc_html(get_the_title($parent_id)); ?></span>
               </a>
               <meta itemprop="position" content="<?php echo $position; ?>">
             </li>
-            <?php
+        <?php
             $position++;
           endforeach;
         endif;
@@ -773,10 +768,10 @@ function breadcrumb()
 
         <!-- 月別アーカイブページの場合 --><?php elseif (is_month()): ?>
         <?php
-        // blog（またはpost_type=blog）ならパンくずリンクを固定する
-        $post_type = get_query_var('post_type');
-        if ($post_type === 'blog' || $post_type === '' || $post_type === 'post'):
-          ?>
+                              // blog（またはpost_type=blog）ならパンくずリンクを固定する
+                              $post_type = get_query_var('post_type');
+                              if ($post_type === 'blog' || $post_type === '' || $post_type === 'post'):
+        ?>
           <li class="breadcrumb_item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemscope itemtype="https://schema.org/WebPage" itemprop="item"
               itemid="<?php echo esc_url(home_url('/blog/')); ?>" href="<?php echo esc_url(home_url('/blog/')); ?>">
@@ -849,7 +844,7 @@ function breadcrumb()
 
         <!-- 投稿のカテゴリーページの場合 -->
       <?php elseif (is_category()):
-        $current_category = get_queried_object(); ?>
+                              $current_category = get_queried_object(); ?>
         <li class="breadcrumb_item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           <span itemprop="name"><?php echo $current_category->name; ?></span>
           <meta itemprop="position" content="2">
@@ -904,7 +899,7 @@ function breadcrumb()
       <?php endif; ?>
     </ol>
   </nav>
-  <?php
+<?php
 }
 
 /* ---------- breadcrumb() をショートコード化 ---------- */
@@ -918,4 +913,133 @@ function breadcrumb_shortcode()
   }
 }
 add_shortcode('breadcrumb', 'breadcrumb_shortcode');
-?>
+
+
+
+// ---------- NEWS REST API ---------- 
+function konan_get_remote_news_items()
+{
+  $cache_key = 'konan_remote_news_items';
+  $cache = get_transient($cache_key);
+
+  if ($cache !== false) {
+    return $cache;
+  }
+
+  $url = add_query_arg(
+    array(
+      'blogcat'  => 56,
+      'per_page' => 3,
+      'orderby'  => 'date',
+      'order'    => 'desc',
+      '_fields'  => 'id,date,link,title',
+    ),
+    'https://oshiro-skin-clinic.com/wp-json/wp/v2/blog'
+  );
+
+  $response = wp_remote_get($url, array(
+    'timeout' => 5,
+  ));
+
+  if (is_wp_error($response)) {
+    return array();
+  }
+
+  $status_code = wp_remote_retrieve_response_code($response);
+
+  if ($status_code !== 200) {
+    return array();
+  }
+
+  $body = wp_remote_retrieve_body($response);
+  $posts = json_decode($body, true);
+
+  if (empty($posts) || !is_array($posts)) {
+    return array();
+  }
+
+  $items = array();
+
+  foreach ($posts as $post) {
+    $items[] = array(
+      'title' => !empty($post['title']['rendered']) ? wp_strip_all_tags($post['title']['rendered']) : '',
+      'url'   => !empty($post['link']) ? $post['link'] : '',
+      'date'  => !empty($post['date']) ? date_i18n('Y.m.d', strtotime($post['date'])) : '',
+    );
+  }
+
+  set_transient($cache_key, $items, 10 * MINUTE_IN_SECONDS);
+
+  return $items;
+}
+
+
+// ---------- BLOG REST API ---------- 
+function konan_get_remote_blog_items()
+{
+  $cache_key = 'konan_remote_blog_items';
+  $cache = get_transient($cache_key);
+
+  if ($cache !== false) {
+    return $cache;
+  }
+
+  $url = add_query_arg(
+    array(
+      'genre'    => 4,
+      'per_page' => 4,
+      'orderby'  => 'date',
+      'order'    => 'desc',
+      '_embed'   => 1,
+    ),
+    'https://oshiro-skin-clinic.com/wp-json/wp/v2/blog'
+  );
+
+  $response = wp_remote_get($url, array(
+    'timeout' => 5,
+  ));
+
+  if (is_wp_error($response)) {
+    return array();
+  }
+
+  $status_code = wp_remote_retrieve_response_code($response);
+
+  if ($status_code !== 200) {
+    return array();
+  }
+
+  $body = wp_remote_retrieve_body($response);
+  $posts = json_decode($body, true);
+
+  if (empty($posts) || !is_array($posts)) {
+    return array();
+  }
+
+  $items = array();
+
+  foreach ($posts as $post) {
+    $eyecatch = '';
+
+    if (!empty($post['_embedded']['wp:featuredmedia'][0]['media_details']['sizes']['medium_large']['source_url'])) {
+      $eyecatch = $post['_embedded']['wp:featuredmedia'][0]['media_details']['sizes']['medium_large']['source_url'];
+    } elseif (!empty($post['_embedded']['wp:featuredmedia'][0]['media_details']['sizes']['large']['source_url'])) {
+      $eyecatch = $post['_embedded']['wp:featuredmedia'][0]['media_details']['sizes']['large']['source_url'];
+    } elseif (!empty($post['_embedded']['wp:featuredmedia'][0]['media_details']['sizes']['medium']['source_url'])) {
+      $eyecatch = $post['_embedded']['wp:featuredmedia'][0]['media_details']['sizes']['medium']['source_url'];
+    } elseif (!empty($post['_embedded']['wp:featuredmedia'][0]['source_url'])) {
+      $eyecatch = $post['_embedded']['wp:featuredmedia'][0]['source_url'];
+    }
+
+    $items[] = array(
+      'title'    => !empty($post['title']['rendered']) ? wp_strip_all_tags($post['title']['rendered']) : '',
+      'url'      => !empty($post['link']) ? $post['link'] : '',
+      'date'     => !empty($post['date']) ? date_i18n('Y.m.d', strtotime($post['date'])) : '',
+      'eyecatch' => $eyecatch,
+    );
+  }
+
+  set_transient($cache_key, $items, 10 * MINUTE_IN_SECONDS);
+
+  return $items;
+}
